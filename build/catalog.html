@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jewellery shop «CH»">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CH Jewellery: product catalog</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="./fonts/poppins-v15-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/poppins-v15-latin-500.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/poppins-v15-latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/cormorant-garamond-v10-latin-italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/cormorant-garamond-v10-latin-600.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/cormorant-garamond-v10-latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  </head>
+
+  <body class="page__body">
+    <!-- page-header--closed - закрытое состояние меню, page-header--opened - открытое меню, page-header--nojs - состояние меню при отключеном js -->
+    <header class="page-header  page-header--closed  page-header--nojs">
+      <div class="page-header__user-menu  user-menu">
+        <div class="user-menu__inner">
+          <form class="user-menu__search-form" action="https://echo.htmlacademy.ru/" method="GET">
+            <label class="visually-hidden" for="search">Enter text to search:</label>
+            <input type="search" name="search" id="search" placeholder="Type here to search">
+            <svg class="user-menu__search-icon" width="14" height="14" aria-hidden="true" focusable="false">
+              <use xlink:href="./img/sprite.svg#search-icon"></use>
+            </svg>
+          </form>
+          <button class="user-menu__nav-toggle" type="button" aria-label="Open menu"></button>
+          <a class="user-menu__logo-link  user-menu__logo-link--active" href="main.html">
+            <svg class="user-menu__logo" width="66" height="66" role="img" aria-label="Jewellery shop «CH» logo.">
+              <use xlink:href="./img/sprite.svg#logo"></use>
+            </svg>
+          </a>
+          <div class="user-menu__user">
+            <a class="user-menu__user-link  user-menu__user-link--login  login-link" href="login.html">Login</a>
+            <a class="user-menu__user-link  user-menu__user-link--cart" href="#">
+              <svg class="user-menu__cart-icon" width="20" height="18" aria-hidden="true" focusable="false">
+                <use xlink:href="./img/sprite.svg#cart-icon"></use>
+              </svg>
+              <span class="user-menu__cart-title">Cart</span>
+              <span class="user-menu__cart-counter">0</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <nav class="page-header__site-menu  site-menu">
+        <ul class="site-menu__list">
+          <li class="site-menu__item">
+            <a class="site-menu__link" href="#">What’s new</a>
+          </li>
+          <li class="site-menu__item">
+            <a class="site-menu__link" href="#">Chokers</a>
+          </li>
+          <li class="site-menu__item">
+            <a class="site-menu__link" href="#">Necklaces</a>
+          </li>
+          <li class="site-menu__item">
+            <a class="site-menu__link" href="#">Rings</a>
+          </li>
+          <li class="site-menu__item">
+            <a class="site-menu__link" href="#">Earrings</a>
+          </li>
+        </ul>
+      </nav>
+      <ul class="page-header__about-menu  about-menu">
+        <li class="about-menu__item">
+          <a class="about-menu__link" href="#">About CH</a>
+        </li>
+        <li class="about-menu__item">
+          <a class="about-menu__link" href="#">Stores & Hours</a>
+        </li>
+        <li class="about-menu__item">
+          <a class="about-menu__link" href="#">Contact Us</a>
+        </li>
+      </ul>
+      <div class="page-header__login">
+        <a class="page-header__login-link  login-link" href="login.html">Login</a>
+      </div>
+    </header>
+
+    <main>
+      <h1 class="visually-hidden">Product catalog of jewellery shop «CH»</h1>
+
+      <div class="catalog-main">
+        <span class="catalog-main__title">all jewellery</span>
+        <span class="catalog-main__text">Discover picks of fashion's finest trends in our jewellery catalog</span>
+      </div>
+
+      <div class="catalog">
+        <a class="catalog__filter-button" href="filter.html">Filter</a>
+        <!-- catalog__form-wrapper--closed - закрытый фильтр, catalog__form-wrapper--opened - открытый фильтр, catalog__form-wrapper--nojs - состояние фильтра при отключеном js -->
+        <div class="catalog__form-wrapper  catalog__form-wrapper--closed  catalog__form-wrapper--nojs">
+          <form class="catalog__form  form-catalog" action="https://echo.htmlacademy.ru/" method="get">
+            <!-- form-catalog__wrapper--closed - закрытый таб, form-catalog__wrapper--opened - открытый таб, form-catalog__wrapper--nojs - состояние таба при отключеном js -->
+            <div class="form-catalog__wrapper  form-catalog__wrapper--closed  form-catalog__wrapper--nojs" tabindex="0">
+              <fieldset>
+                <legend>Product</legend>
+                <div class="form-catalog__inner">
+                  <input class="visually-hidden" id="necklaces" type="checkbox" name="product-necklaces" checked="">
+                  <label for="necklaces">Necklaces</label>
+                  <input class="visually-hidden" id="chokers" type="checkbox" name="product-chokers" checked="">
+                  <label for="chokers">Chokers</label>
+                  <input class="visually-hidden" id="rings" type="checkbox" name="product-rings">
+                  <label for="rings">Rings</label>
+                  <input class="visually-hidden" id="earrings" type="checkbox" name="product-earrings" checked="">
+                  <label for="earrings">Earrings</label>
+                </div>
+              </fieldset>
+            </div>
+            <div class="form-catalog__wrapper  form-catalog__wrapper--closed  form-catalog__wrapper--nojs" tabindex="0">
+              <fieldset>
+                <legend>Material</legend>
+                <div class="form-catalog__inner">
+                  <input class="visually-hidden" id="gold" type="checkbox" name="product-gold">
+                  <label for="gold">Gold</label>
+                  <input class="visually-hidden" id="silver" type="checkbox" name="product-silver">
+                  <label for="silver">Silver</label>
+                </div>
+              </fieldset>
+            </div>
+            <div class="form-catalog__wrapper  form-catalog__wrapper--closed  form-catalog__wrapper--nojs" tabindex="0">
+              <fieldset>
+                <legend>Collection</legend>
+                <div class="form-catalog__inner">
+                  <input class="visually-hidden" id="pink-flamingo" type="checkbox" name="product-pink-flamingo">
+                  <label for="pink-flamingo">Pink flamingo</label>
+                  <input class="visually-hidden" id="dreams" type="checkbox" name="product-dreams">
+                  <label for="dreams">Dreams</label>
+                </div>
+              </fieldset>
+            </div>
+            <div class="form-catalog__wrapper  form-catalog__wrapper--price  form-catalog__wrapper--closed  form-catalog__wrapper--nojs" tabindex="0">
+              <fieldset>
+                <legend>Price</legend>
+                <div class="form-catalog__inner  form-catalog__inner--price">
+                  <div class="form-catalog__scale">
+                    <div class="form-catalog__bar"></div>
+                    <div class="form-catalog__toggle  form-catalog__toggle--min" tabindex="0"></div>
+                    <div class="form-catalog__toggle  form-catalog__toggle--max" tabindex="0"></div>
+                  </div>
+                  <span class="form-catalog__cost  form-catalog__cost--min">$ 55</span>
+                  <span class="form-catalog__cost  form-catalog__cost--max">$ 155</span>
+                </div>
+              </fieldset>
+            </div>
+            <button class="form-catalog__button  form-catalog__button--apply" type="submit">Apply</button>
+            <button class="form-catalog__button  form-catalog__button--clear" type="button">Clear All</button>
+            <button class="form-catalog__close-button" type="button" aria-label="Close"></button>
+          </form>
+        </div>
+        <section class="catalog__products  products">
+          <a class="products__product-link" href="#">
+            <div class="products__img-wrapper">
+              <picture>
+                <!-- 1х: 130px; 2x: 260px -->
+                <source type="image/webp" media="(max-width: 767px)" srcset="./img/product5-mobile.webp 1x, ./img/product5-mobile@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="./img/product5-mobile.jpg 1x, ./img/product5-mobile@2x.jpg 2x">
+                <!-- 1х: 206px; 2x: 412px -->
+                <source type="image/webp" media="(max-width: 1023px)" srcset="./img/product5-tablet.webp 1x, ./img/product5-tablet@2x.webp 2x">
+                <source media="(max-width: 1023px)" srcset="./img/product5-tablet.jpg 1x, ./img/product5-tablet@2x.jpg 2x">
+                <!-- 1х: 270px; 2x: 540px -->
+                <source type="image/webp" srcset="./img/product5-desktop.webp 1x, ./img/product5-desktop@2x.webp 2x">
+                <img src="./img/product5-desktop.jpg" width="270" height="272" alt="Сережки с белым жемчугом." srcset="./img/product5-desktop@2x.jpg 2x">
+              </picture>
+            </div>
+            <h3>Double pearl earrings</h3>
+            <span>$ 115</span>
+          </a>
+          <a class="products__product-link" href="#">
+            <div class="products__img-wrapper">
+              <picture>
+                <!-- 1х: 130px; 2x: 260px -->
+                <source type="image/webp" media="(max-width: 767px)" srcset="./img/product6-mobile.webp 1x, ./img/product6-mobile@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="./img/product6-mobile.jpg 1x, ./img/product6-mobile@2x.jpg 2x">
+                <!-- 1х: 206px; 2x: 412px -->
+                <source type="image/webp" media="(max-width: 1023px)" srcset="./img/product6-tablet.webp 1x, ./img/product6-tablet@2x.webp 2x">
+                <source media="(max-width: 1023px)" srcset="./img/product6-tablet.jpg 1x, ./img/product6-tablet@2x.jpg 2x">
+                <!-- 1х: 270px; 2x: 540px -->
+                <source type="image/webp" srcset="./img/product6-desktop.webp 1x, ./img/product6-desktop@2x.webp 2x">
+                <img src="./img/product6-desktop.jpg" width="270" height="272" alt="Черная подвеска с золотым шариком." srcset="./img/product6-desktop@2x.jpg 2x">
+              </picture>
+            </div>
+            <h3>Choker with gold bead</h3>
+            <span>$ 55</span>
+          </a>
+          <a class="products__product-link" href="#">
+            <div class="products__img-wrapper">
+              <picture>
+                <!-- 1х: 130px; 2x: 260px -->
+                <source type="image/webp" media="(max-width: 767px)" srcset="./img/product7-mobile.webp 1x, ./img/product7-mobile@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="./img/product7-mobile.jpg 1x, ./img/product7-mobile@2x.jpg 2x">
+                <!-- 1х: 206px; 2x: 412px -->
+                <source type="image/webp" media="(max-width: 1023px)" srcset="./img/product7-tablet.webp 1x, ./img/product7-tablet@2x.webp 2x">
+                <source media="(max-width: 1023px)" srcset="./img/product7-tablet.jpg 1x, ./img/product7-tablet@2x.jpg 2x">
+                <!-- 1х: 270px; 2x: 540px -->
+                <source type="image/webp" srcset="./img/product7-desktop.webp 1x, ./img/product7-desktop@2x.webp 2x">
+                <img src="./img/product7-desktop.jpg" width="270" height="272" alt="Три золотые цепочки с разными кулонами." srcset="./img/product7-desktop@2x.jpg 2x">
+              </picture>
+            </div>
+            <h3>Gold layered necklace</h3>
+            <span>$ 155</span>
+          </a>
+          <a class="products__product-link" href="#">
+            <div class="products__img-wrapper">
+              <picture>
+                <!-- 1х: 130px; 2x: 260px -->
+                <source type="image/webp" media="(max-width: 767px)" srcset="./img/product8-mobile.webp 1x, ./img/product8-mobile@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="./img/product8-mobile.jpg 1x, ./img/product8-mobile@2x.jpg 2x">
+                <!-- 1х: 206px; 2x: 412px -->
+                <source type="image/webp" media="(max-width: 1023px)" srcset="./img/product8-tablet.webp 1x, ./img/product8-tablet@2x.webp 2x">
+                <source media="(max-width: 1023px)" srcset="./img/product8-tablet.jpg 1x, ./img/product8-tablet@2x.jpg 2x">
+                <!-- 1х: 270px; 2x: 540px -->
+                <source type="image/webp" srcset="./img/product8-desktop.webp 1x, ./img/product8-desktop@2x.webp 2x">
+                <img src="./img/product8-desktop.jpg" width="270" height="272" alt="Серебряная подвеска с голубым камнем." srcset="./img/product8-desktop@2x.jpg 2x">
+              </picture>
+            </div>
+            <h3>Blue gemstone pendant</h3>
+            <span>$ 105</span>
+          </a>
+          <a class="products__product-link" href="#">
+            <div class="products__img-wrapper">
+              <picture>
+                <!-- 1х: 130px; 2x: 260px -->
+                <source type="image/webp" media="(max-width: 767px)" srcset="./img/product9-mobile.webp 1x, ./img/product9-mobile@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="./img/product9-mobile.jpg 1x, ./img/product9-mobile@2x.jpg 2x">
+                <!-- 1х: 206px; 2x: 412px -->
+                <source type="image/webp" media="(max-width: 1023px)" srcset="./img/product9-tablet.webp 1x, ./img/product9-tablet@2x.webp 2x">
+                <source media="(max-width: 1023px)" srcset="./img/product9-tablet.jpg 1x, ./img/product9-tablet@2x.jpg 2x">
+                <!-- 1х: 270px; 2x: 540px -->
+                <source type="image/webp" srcset="./img/product9-desktop.webp 1x, ./img/product9-desktop@2x.webp 2x">
+                <img src="./img/product9-desktop.jpg" width="270" height="272" alt="Сережки с круглыми голубыми камнями." srcset="./img/product9-desktop@2x.jpg 2x">
+              </picture>
+            </div>
+            <h3>Boho earrings</h3>
+            <span>$ 75</span>
+          </a>
+          <a class="products__product-link" href="#">
+            <div class="products__img-wrapper">
+              <picture>
+                <!-- 1х: 130px; 2x: 260px -->
+                <source type="image/webp" media="(max-width: 767px)" srcset="./img/product10-mobile.webp 1x, ./img/product10-mobile@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="./img/product10-mobile.jpg 1x, ./img/product10-mobile@2x.jpg 2x">
+                <!-- 1х: 206px; 2x: 412px -->
+                <source type="image/webp" media="(max-width: 1023px)" srcset="./img/product10-tablet.webp 1x, ./img/product10-tablet@2x.webp 2x">
+                <source media="(max-width: 1023px)" srcset="./img/product10-tablet.jpg 1x, ./img/product10-tablet@2x.jpg 2x">
+                <!-- 1х: 270px; 2x: 540px -->
+                <source type="image/webp" srcset="./img/product10-desktop.webp 1x, ./img/product10-desktop@2x.webp 2x">
+                <img src="./img/product10-desktop.jpg" width="270" height="272" alt="Золотая цепочка с кулоном ввиде птицы." srcset="./img/product10-desktop@2x.jpg 2x">
+              </picture>
+            </div>
+            <h3>Gold bird necklace</h3>
+            <span>$ 135</span>
+          </a>
+          <a class="products__product-link" href="#">
+            <div class="products__img-wrapper">
+              <picture>
+                <!-- 1х: 130px; 2x: 260px -->
+                <source type="image/webp" media="(max-width: 767px)" srcset="./img/product11-mobile.webp 1x, ./img/product11-mobile@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="./img/product11-mobile.jpg 1x, ./img/product11-mobile@2x.jpg 2x">
+                <!-- 1х: 206px; 2x: 412px -->
+                <source type="image/webp" media="(max-width: 1023px)" srcset="./img/product11-tablet.webp 1x, ./img/product11-tablet@2x.webp 2x">
+                <source media="(max-width: 1023px)" srcset="./img/product11-tablet.jpg 1x, ./img/product11-tablet@2x.jpg 2x">
+                <!-- 1х: 270px; 2x: 540px -->
+                <source type="image/webp" srcset="./img/product11-desktop.webp 1x, ./img/product11-desktop@2x.webp 2x">
+                <img src="./img/product11-desktop.jpg" width="270" height="272" alt="Черное кожаное колье." srcset="./img/product11-desktop@2x.jpg 2x">
+              </picture>
+            </div>
+            <h3>Black leather choker</h3>
+            <span>$ 85</span>
+          </a>
+          <a class="products__product-link" href="#">
+            <div class="products__img-wrapper">
+              <picture>
+                <!-- 1х: 130px; 2x: 260px -->
+                <source type="image/webp" media="(max-width: 767px)" srcset="./img/product12-mobile.webp 1x, ./img/product12-mobile@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="./img/product12-mobile.jpg 1x, ./img/product12-mobile@2x.jpg 2x">
+                <!-- 1х: 206px; 2x: 412px -->
+                <source type="image/webp" media="(max-width: 1023px)" srcset="./img/product12-tablet.webp 1x, ./img/product12-tablet@2x.webp 2x">
+                <source media="(max-width: 1023px)" srcset="./img/product12-tablet.jpg 1x, ./img/product12-tablet@2x.jpg 2x">
+                <!-- 1х: 270px; 2x: 540px -->
+                <source type="image/webp" srcset="./img/product12-desktop.webp 1x, ./img/product12-desktop@2x.webp 2x">
+                <img src="./img/product12-desktop.jpg" width="270" height="272" alt="Серебряная цепочка с кулоном из фиолетового аметиста." srcset="./img/product12-desktop@2x.jpg 2x">
+              </picture>
+            </div>
+            <h3>Necklace with amethyst</h3>
+            <span>$ 145</span>
+          </a>
+          <a class="products__product-link" href="#">
+            <div class="products__img-wrapper">
+              <picture>
+                <!-- 1х: 130px; 2x: 260px -->
+                <source type="image/webp" media="(max-width: 767px)" srcset="./img/product13-mobile.webp 1x, ./img/product13-mobile@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="./img/product13-mobile.jpg 1x, ./img/product13-mobile@2x.jpg 2x">
+                <!-- 1х: 206px; 2x: 412px -->
+                <source type="image/webp" media="(max-width: 1023px)" srcset="./img/product13-tablet.webp 1x, ./img/product13-tablet@2x.webp 2x">
+                <source media="(max-width: 1023px)" srcset="./img/product13-tablet.jpg 1x, ./img/product13-tablet@2x.jpg 2x">
+                <!-- 1х: 270px; 2x: 540px -->
+                <source type="image/webp" srcset="./img/product13-desktop.webp 1x, ./img/product13-desktop@2x.webp 2x">
+                <img src="./img/product13-desktop.jpg" width="270" height="272" alt="Серьги ввиде слоников." srcset="./img/product13-desktop@2x.jpg 2x">
+              </picture>
+            </div>
+            <h3>Elephant earrings</h3>
+            <span>$ 95</span>
+          </a>
+          <a class="products__product-link" href="#">
+            <div class="products__img-wrapper">
+              <picture>
+                <!-- 1х: 130px; 2x: 260px -->
+                <source type="image/webp" media="(max-width: 767px)" srcset="./img/product14-mobile.webp 1x, ./img/product14-mobile@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="./img/product14-mobile.jpg 1x, ./img/product14-mobile@2x.jpg 2x">
+                <!-- 1х: 206px; 2x: 412px -->
+                <source type="image/webp" media="(max-width: 1023px)" srcset="./img/product14-tablet.webp 1x, ./img/product14-tablet@2x.webp 2x">
+                <source media="(max-width: 1023px)" srcset="./img/product14-tablet.jpg 1x, ./img/product14-tablet@2x.jpg 2x">
+                <!-- 1х: 270px; 2x: 540px -->
+                <source type="image/webp" srcset="./img/product14-desktop.webp 1x, ./img/product14-desktop@2x.webp 2x">
+                <img src="./img/product14-desktop.jpg" width="270" height="272" alt="Серебряная цепочка с длинным кулоном." srcset="./img/product14-desktop@2x.jpg 2x">
+              </picture>
+            </div>
+            <h3>Threader necklace</h3>
+            <span>$ 115</span>
+          </a>
+          <a class="products__product-link" href="#">
+            <div class="products__img-wrapper">
+              <picture>
+                <!-- 1х: 130px; 2x: 260px -->
+                <source type="image/webp" media="(max-width: 767px)" srcset="./img/product15-mobile.webp 1x, ./img/product15-mobile@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="./img/product15-mobile.jpg 1x, ./img/product15-mobile@2x.jpg 2x">
+                <!-- 1х: 206px; 2x: 412px -->
+                <source type="image/webp" media="(max-width: 1023px)" srcset="./img/product15-tablet.webp 1x, ./img/product15-tablet@2x.webp 2x">
+                <source media="(max-width: 1023px)" srcset="./img/product15-tablet.jpg 1x, ./img/product15-tablet@2x.jpg 2x">
+                <!-- 1х: 270px; 2x: 540px -->
+                <source type="image/webp" srcset="./img/product15-desktop.webp 1x, ./img/product15-desktop@2x.webp 2x">
+                <img src="./img/product15-desktop.jpg" width="270" height="272" alt="Серебряная цепочка с кулоном ввиде птицы." srcset="./img/product15-desktop@2x.jpg 2x">
+              </picture>
+            </div>
+            <h3>Origami crane necklace</h3>
+            <span>$ 105</span>
+          </a>
+          <a class="products__product-link" href="#">
+            <div class="products__img-wrapper">
+              <picture>
+                <!-- 1х: 130px; 2x: 260px -->
+                <source type="image/webp" media="(max-width: 767px)" srcset="./img/product16-mobile.webp 1x, ./img/product16-mobile@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="./img/product16-mobile.jpg 1x, ./img/product16-mobile@2x.jpg 2x">
+                <!-- 1х: 206px; 2x: 412px -->
+                <source type="image/webp" media="(max-width: 1023px)" srcset="./img/product16-tablet.webp 1x, ./img/product16-tablet@2x.webp 2x">
+                <source media="(max-width: 1023px)" srcset="./img/product16-tablet.jpg 1x, ./img/product16-tablet@2x.jpg 2x">
+                <!-- 1х: 270px; 2x: 540px -->
+                <source type="image/webp" srcset="./img/product16-desktop.webp 1x, ./img/product16-desktop@2x.webp 2x">
+                <img src="./img/product16-desktop.jpg" width="270" height="272" alt="Серьги-гвоздики с белыми камнями." srcset="./img/product16-desktop@2x.jpg 2x">
+              </picture>
+            </div>
+            <h3>Marble earrings</h3>
+            <span>$ 95</span>
+          </a>
+        </section>
+      </div>
+
+      <div class="catalog-pagination">
+        <div class="catalog-pagination__wrapper">
+          <div class="catalog-pagination__inner">
+            <a class="catalog-pagination__button" href="#">Previous</a>
+            <ul class="catalog-pagination__list">
+              <li class="catalog-pagination__item">
+                <a class="catalog-pagination__link  catalog-pagination__link--current" href="#">1</a>
+              </li>
+              <li class="catalog-pagination__item">
+                <a class="catalog-pagination__link" href="#">2</a>
+              </li>
+              <li class="catalog-pagination__item">
+                <a class="catalog-pagination__link" href="#">3</a>
+              </li>
+              <li class="catalog-pagination__item">
+                <a class="catalog-pagination__link" href="#">4</a>
+              </li>
+              <li class="catalog-pagination__item">
+                <a class="catalog-pagination__link" href="#">5</a>
+              </li>
+            </ul>
+            <a class="catalog-pagination__button" href="#">Next</a>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__inner">
+        <div class="page-footer__subscribe">
+          <h2>The good stuff in your inbox</h2>
+          <p>News and updates from CH. No spam, we promise.</p>
+          <form class="page-footer__form" action="https://echo.htmlacademy.ru/" method="POST">
+            <label class="visually-hidden" for="email">Enter your e-mail:</label>
+            <input type="email" name="email" id="email" placeholder="Your E-mail">
+            <button class="page-footer__form-button" type="button">Sign Up</button>
+          </form>
+        </div>
+        <div class="page-footer__menu-wrapper">
+          <ul class="page-footer__menu">
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#">Ordering & Payment</a>
+            </li>
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#">Terms & Conditions</a>
+            </li>
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#">Returns & Exchanges</a>
+            </li>
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#">Delivery</a>
+            </li>
+          </ul>
+          <ul class="page-footer__menu">
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#">About CH</a>
+            </li>
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#">Stores & Hours</a>
+            </li>
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#">Jobs</a>
+            </li>
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#">Contact Us</a>
+            </li>
+          </ul>
+          <ul class="page-footer__menu  page-footer__menu--socials">
+            <li class="page-footer__item  page-footer__item--socials">
+              <a class="page-footer__link" href="#">
+                <svg class="page-footer__socials-icon" width="16" height="15" aria-hidden="true" focusable="false">
+                  <use xlink:href="./img/sprite.svg#fb-icon"></use>
+                </svg>
+                <span class="page-footer__link-title">Facebook</span>
+              </a>
+            </li>
+            <li class="page-footer__item  page-footer__item--socials">
+              <a class="page-footer__link" href="#">
+                <svg class="page-footer__socials-icon" width="16" height="15" aria-hidden="true" focusable="false">
+                  <use xlink:href="./img/sprite.svg#ig-icon"></use>
+                </svg>
+                <span class="page-footer__link-title">Instagram</span>
+              </a>
+            </li>
+            <li class="page-footer__item  page-footer__item--socials">
+              <a class="page-footer__link" href="#">
+                <svg class="page-footer__socials-icon" width="16" height="15" aria-hidden="true" focusable="false">
+                  <use xlink:href="./img/sprite.svg#pi-icon"></use>
+                </svg>
+                <span class="page-footer__link-title">Pinterest</span>
+              </a>
+            </li>
+            <li class="page-footer__item  page-footer__item--socials">
+              <a class="page-footer__link" href="#">
+                <svg class="page-footer__socials-icon" width="16" height="15" aria-hidden="true" focusable="false">
+                  <use xlink:href="./img/sprite.svg#tw-icon"></use>
+                </svg>
+                <span class="page-footer__link-title">Twitter</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- login-modal--show - открытый попап, login-modal--show-overflow - открытый попап при высоте экрана меньше попапа -->
+    <section class="login-modal">
+      <div class="login-modal__wrapper">
+        <h2>Log In</h2>
+        <form class="login-modal__form  form" action="https://echo.htmlacademy.ru/" method="post">
+          <label class="visually-hidden" for="email-modal">Ваш электронный адрес:</label>
+          <input type="email" name="email" id="email-modal" placeholder="Your E-mail" required="">
+          <label class="visually-hidden" for="password-modal">Ваш пароль:</label>
+          <input type="password" name="password" id="password-modal" placeholder="Password" required="">
+          <a class="login-modal__forgot" href="#">Forgot your password?</a>
+          <button type="submit">Log In</button>
+        </form>
+        <div class="login-modal__sign">
+          <p>Don’t have an account?</p>
+          <a class="login-modal__sign-link" href="#">Sign up</a>
+        </div>
+        <button class="login-modal__close-button" type="button" aria-label="Close"></button>
+      </div>
+    </section>
+
+    <script src="js/vendor.js"></script>
+    <script src="js/main.js"></script>
+
+  </body>
+
+</html>

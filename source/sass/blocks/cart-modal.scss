@@ -1,0 +1,353 @@
+.cart-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+  display: none;
+  justify-content: center;
+  background-color: transparentize($dark-grey, 0.75);
+  overflow: auto;
+
+  &--show {
+    display: flex;
+    align-items: center;
+  }
+
+  &--show-overflow {
+    display: flex;
+    align-items: flex-start;
+  }
+}
+
+.cart-modal__wrapper {
+  position: relative;
+  width: 500px;
+  padding: 47px 33px 55px 35px;
+  background-color: $white;
+  box-shadow: 0 4px 32px transparentize($middle-grey, 0.76);
+  overflow: visible;
+
+  @media (max-width: $tablet) {
+    padding: 47px 28px 55px 29px;
+  }
+
+  @media (max-width: $mobile) {
+    width: 90.7%;
+    padding: 38px 15px 45px;
+  }
+}
+
+.cart-modal__wrapper h2 {
+  margin: 0 0 42px;
+  font-family: $cormorant;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 34px;
+  color: $dark-grey;
+  text-align: center;
+
+  @media (max-width: $mobile) {
+    margin: 0 0 29px;
+    font-size: 24px;
+    line-height: 29px;
+  }
+}
+
+.cart-modal__title-wrapper {
+  flex-grow: 2;
+  padding: 0 20px;
+
+  @media (max-width: $mobile) {
+    padding: 0 15px;
+  }
+}
+
+.cart-modal__title-wrapper h3 {
+  margin: 0 0 7px;
+  font-family: $cormorant;
+  font-weight: 700;
+  font-size: 1.13em;
+  line-height: 23px;
+  color: $dark-grey;
+
+  @media (max-width: $mobile) {
+    font-size: 1em;
+    line-height: 21px;
+  }
+}
+
+.cart-modal__title-wrapper span {
+  font-size: 18px;
+  line-height: 23px;
+  color: $dark-grey;
+
+  @media (max-width: $mobile) {
+    font-size: 16px;
+    line-height: 21px;
+  }
+}
+
+.cart-modal__count-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (max-width: $tablet) {
+    padding: 9px 1px 0 0;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 20px 1px 0 0;
+  }
+}
+
+.cart-modal__count-wrapper span {
+  align-self: center;
+  display: block;
+  padding: 0 5px 5px;
+}
+
+.cart-modal__count-button {
+  position: absolute;
+  right: 0;
+  width: 14px;
+  height: 14px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    right: 0;
+    width: 14px;
+    height: 2px;
+    background-color: $grey;
+    cursor: pointer;
+  }
+
+  &--add {
+    top: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 6px;
+      width: 2px;
+      height: 14px;
+      background-color: $grey;
+      cursor: pointer;
+    }
+  }
+
+  &--reduce {
+    bottom: 9px;
+  }
+
+  &:hover {
+    &::after,
+    &::before {
+      background-color: $brown;
+    }
+  }
+
+  &:focus,
+  &:active {
+    &::after,
+    &::before {
+      background-color: $brown;
+      opacity: 0.6;
+    }
+  }
+
+  @media (max-width: $tablet) {
+    &--add {
+      top: 4px;
+    }
+
+    &--reduce {
+      bottom: 5px;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    &--reduce {
+      bottom: -5px;
+    }
+  }
+}
+
+.cart-modal__item-wrapper {
+  display: flex;
+  margin: 0 0 56px;
+
+  @media (max-width: $mobile) {
+    margin: 0 0 51px;
+  }
+}
+
+.cart-modal__img-wrapper {
+  padding: 4px 0 0;
+}
+
+.cart-modal__img-wrapper img {
+  display: block;
+  width: 100%;
+}
+
+.cart-modal__information-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 36px;
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    margin: 0 0 31px;
+  }
+}
+
+.cart-modal__information-wrapper p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 18px;
+  color: $dark-grey;
+
+  &:nth-child(2) {
+    font-weight: 500;
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 12px;
+    line-height: 16px;
+
+    &:nth-child(2) {
+      margin: 12px 0 0;
+    }
+  }
+}
+
+.cart-modal__button-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+  }
+}
+
+.cart-modal__button {
+  display: block;
+  width: 46.4%;
+  min-height: 68px;
+  padding: 22px 15px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  text-decoration: none;
+
+  &:not(:last-child) {
+    margin: 0 30px 0 0;
+  }
+
+  &--shop {
+    color: $dark-grey;
+    background-color: transparent;
+    border: 1px solid $brown;
+  }
+
+  &--cart {
+    color: $white;
+    background-color: $brown;
+  }
+
+  &--shop:hover,
+  &--shop:focus {
+    color: $white;
+    background-color: $brown;
+  }
+
+  &--shop:active {
+    color: $white;
+    background-color: $brown;
+    opacity: 0.6;
+  }
+
+  &--cart:hover,
+  &--cart:focus {
+    background-color: $dark-grey;
+  }
+
+  &--cart:active {
+    background-color: $dark-grey;
+    opacity: 0.6;
+  }
+
+  @media (max-width: $mobile) {
+    width: 100%;
+
+    &:not(:last-child) {
+      margin: 0 0 20px 0;
+    }
+  }
+}
+
+.cart-modal__close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 35px;
+  height: 35px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 7px;
+    width: 17px;
+    height: 17px;
+    background: url("../img/close-button-black.svg") 0 0 no-repeat;
+  }
+
+  &:hover {
+    &::before {
+      opacity: 0.6;
+    }
+  }
+
+  &:focus,
+  &:active {
+    &::before {
+      opacity: 0.3;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    top: 5px;
+    right: 5px;
+  }
+}
+
+.modal-main .cart-modal {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+}
+
+.modal-main .cart-modal__wrapper {
+  box-shadow: none;
+}
+
+.modal-main .cart-modal__close-button {
+  display: none;
+}

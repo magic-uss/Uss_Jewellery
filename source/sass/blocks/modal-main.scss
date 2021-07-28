@@ -1,0 +1,32 @@
+.modal-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 25px;
+
+  @media (max-width: $tablet) {
+    padding: 30px 45px;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 30px 15px;
+  }
+}
+
+.modal-main__link {
+  display: block;
+  margin: 0 0 30px;
+  font-weight: 500;
+  color: $dark-grey;
+  text-decoration: none;
+
+  &:hover {
+    color: $brown;
+  }
+
+  &:focus,
+  &:active {
+    color: $brown;
+    opacity: 0.6;
+  }
+}

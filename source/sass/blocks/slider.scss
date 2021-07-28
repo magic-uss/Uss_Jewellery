@@ -1,0 +1,154 @@
+.slider {
+  position: relative;
+  min-width: 0;
+
+  &--product-page {
+    margin-bottom: 125px;
+  }
+
+  @media (max-width: $tablet) {
+    width: 100vw;
+
+    &--product-page {
+      margin-bottom: 19px;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    &--product-page {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.slider__container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 0 52px;
+
+  @media (max-width: $tablet) {
+    margin: 0 0 42px;
+  }
+
+  @media (max-width: $mobile) {
+    margin: 0 0 33px;
+  }
+}
+
+.slider__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-decoration: none;
+
+  &:focus,
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.slider__item h3 {
+  margin: 21px 0 6px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: $dark-grey;
+
+  @media (max-width: $mobile) {
+    margin: 16px 0 6px;
+    text-align: center;
+  }
+}
+
+.slider__item span {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  color: $dark-grey;
+}
+
+.slider__img-wrapper {
+  width: 100%;
+}
+
+.slider__item img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 270 / 284;
+  object-fit: cover;
+
+  @media (max-width: $tablet) {
+    aspect-ratio: 324 / 340;
+  }
+
+  @media (max-width: $mobile) {
+    aspect-ratio: 130 / 136;
+  }
+}
+
+.slider__item:hover h3,
+.slider__item:focus h3,
+.slider__item:active h3,
+.slider__item:hover span,
+.slider__item:focus span,
+.slider__item:active span {
+  color: $brown;
+}
+
+.slider__pagination-button {
+  position: absolute;
+  top: 159px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 11px;
+    background: url("../img/arrow-left.svg") 0 0 / cover no-repeat;
+  }
+
+  &--left {
+    left: 24px;
+  }
+
+  &--right {
+    right: 54px;
+
+    &::after {
+      transform: rotate(180deg);
+    }
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus,
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (max-width: $tablet) {
+    top: 52px;
+
+    &::after {
+      width: 36px;
+      height: 15px;
+    }
+
+    &--left {
+      left: 45px;
+    }
+
+    &--right {
+      right: 81px;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    display: none;
+  }
+}

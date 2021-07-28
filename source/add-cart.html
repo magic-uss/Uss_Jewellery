@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jewellery shop «CH»">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CH Jewellery: product filter</title>
+    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="preload" href="./fonts/poppins-v15-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/poppins-v15-latin-500.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/poppins-v15-latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  </head>
+
+  <body class="page__body">
+    <header class="modal-header">
+      <a class="modal-header__logo-link  modal-header__logo-link--active" href="main.html">
+        <svg class="modal-header__logo" width="66" height="66" role="img" aria-label="Jewellery shop «CH» logo.">
+          <use xlink:href="./img/sprite.svg#logo"></use>
+        </svg>
+      </a>
+    </header>
+
+    <main>
+      <h1 class="visually-hidden">Product catalog filter of jewellery shop «CH»</h1>
+
+      <div class="modal-main">
+        <a class="modal-main__link" href="main.html">Back to the main page</a>
+        <section class="cart-modal">
+          <div class="cart-modal__wrapper">
+            <h2>The item was added to&nbsp;your cart</h2>
+            <div class="cart-modal__item-wrapper">
+              <div class="cart-modal__img-wrapper">
+                <picture>
+                  <!-- 1х: 70px; 2x: 140px -->
+                  <source type="image/webp" media="(max-width: 767px)" srcset="./img/cart-tmb-mobile.webp 1x, ./img/cart-tmb-mobile@2x.webp 2x">
+                  <source media="(max-width: 767px)" srcset="./img/cart-tmb-mobile.jpg 1x, ./img/cart-tmb-mobile@2x.jpg 2x">
+                  <!-- 1х: 88px; 2x: 176px -->
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="./img/cart-tmb-tablet.webp 1x, ./img/cart-tmb-tablet@2x.webp 2x">
+                  <source media="(max-width: 1023px)" srcset="./img/cart-tmb-tablet.jpg 1x, ./img/cart-tmb-tablet@2x.jpg 2x">
+                  <!-- 1х: 84px; 2x: 168px -->
+                  <source type="image/webp" srcset="./img/cart-tmb-desktop.webp 1x, ./img/cart-tmb-desktop@2x.webp 2x">
+                  <img src="./img/cart-tmb-desktop.jpg" width="84" height="79" alt="Две золотые цепочки с бирюзовыми кулонами." srcset="./img/cart-tmb-desktop@2x.jpg 2x">
+                </picture>
+              </div>
+              <div class="cart-modal__title-wrapper">
+                <h3>Gold Necklace</h3>
+                <span>$ 115</span>
+              </div>
+              <div class="cart-modal__count-wrapper">
+                <button class="cart-modal__count-button  cart-modal__count-button--add" type="button" aria-label="Add"></button>
+                <span>1</span>
+                <button class="cart-modal__count-button  cart-modal__count-button--reduce" type="button" aria-label="Reduce"></button>
+              </div>
+            </div>
+            <div class="cart-modal__information-wrapper">
+              <p>You have 1 item in the cart</p>
+              <p>Cart subtotal: $ 115</p>
+            </div>
+            <div class="cart-modal__button-wrapper">
+              <a class="cart-modal__button  cart-modal__button--shop" href="catalog.html">Continue shopping</a>
+              <a class="cart-modal__button  cart-modal__button--cart" href="#">Checkout</a>
+            </div>
+            <button class="cart-modal__close-button" type="button" aria-label="Close"></button>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="page-footer">
+    </footer>
+
+  </body>
+
+</html>

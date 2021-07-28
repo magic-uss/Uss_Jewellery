@@ -1,0 +1,152 @@
+.faq h2 {
+  padding: 5px 0 25px;
+  letter-spacing: 0.03em;
+
+  @media (max-width: $tablet) {
+    padding: 5px 0 29px;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 6px 0 9px;
+    text-align: center;
+  }
+}
+
+.faq__list {
+  width: 83%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (max-width: $tablet) {
+    width: 100%;
+  }
+}
+
+.faq__item {
+  position: relative;
+  padding: 43px 42% 41px 43px;
+  border: 1px solid $brown;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    border-bottom: transparent;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50px;
+    right: 49px;
+    width: 17px;
+    height: 10px;
+    background: url("../img/arrow-down.svg") 0 0 / cover no-repeat;
+  }
+
+  &--closed {
+    padding: 43px 42% 36px 43px;
+  }
+
+  &--opened {
+    &::after {
+      transform: rotate(180deg);
+    }
+  }
+
+  &--nojs {
+    &::after {
+      display: none;
+    }
+  }
+
+  &:hover {
+    &::after {
+      opacity: 0.6;
+    }
+  }
+
+  @media (max-width: $tablet) {
+    padding: 43px 12% 44px 49px;
+
+    &::after {
+      width: 23px;
+      height: 13px;
+    }
+
+    &--closed {
+      padding: 43px 12% 18px 49px;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    padding: 16px 20% 19px 24px;
+
+    &::after {
+      top: 23px;
+      right: 24px;
+      width: 20px;
+      height: 12px;
+    }
+
+    &--closed {
+      padding: 19px 19% 4px 24px;
+    }
+  }
+}
+
+.faq__item h3 {
+  margin: 0 0 8px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  color: $dark-grey;
+
+  @media (max-width: $tablet) {
+    margin: 0 0 26px;
+  }
+
+  @media (max-width: $mobile) {
+    margin: 0 0 14px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+.faq__item p {
+  margin: 0 0 0 6px;
+  color: $dark-grey;
+
+  @media (max-width: $tablet) {
+    margin: 0;
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.faq__item--closed p {
+  display: none;
+}
+
+.faq__item--nojs p {
+  display: block;
+}
+
+.faq__item--opened p {
+  display: block;
+}
+
+.faq__item:hover h3,
+.faq__item:hover p {
+  color: $brown;
+}
+
+.faq__item br {
+  display: none;
+
+  @media (max-width: $mobile) {
+    display: inline;
+  }
+}

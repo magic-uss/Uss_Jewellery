@@ -1,0 +1,29 @@
+.modal-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 25px;
+  background-color: $brown;
+
+  @media (max-width: $tablet) {
+    padding: 30px 45px;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 30px 15px;
+  }
+}
+
+.modal-header__logo-link {
+  color: $white;
+}
+
+.modal-header__logo-link--active:hover .modal-header__logo {
+  color: $dark-grey;
+}
+
+.modal-header__logo-link--active:focus .modal-header__logo,
+.modal-header__logo-link--active:active .modal-header__logo {
+  color: $dark-grey;
+  opacity: 0.6;
+}

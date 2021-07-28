@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jewellery shop «CH»">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CH Jewellery: product filter</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="./fonts/poppins-v15-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/poppins-v15-latin-500.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/poppins-v15-latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  </head>
+
+  <body class="page__body">
+    <header class="modal-header">
+      <a class="modal-header__logo-link  modal-header__logo-link--active" href="main.html">
+        <svg class="modal-header__logo" width="66" height="66" role="img" aria-label="Jewellery shop «CH» logo.">
+          <use xlink:href="./img/sprite.svg#logo"></use>
+        </svg>
+      </a>
+    </header>
+
+    <main>
+      <h1 class="visually-hidden">Product catalog filter of jewellery shop «CH»</h1>
+
+      <div class="modal-main">
+        <a class="modal-main__link" href="main.html">Back to the main page</a>
+        <form class="form-catalog" action="https://echo.htmlacademy.ru/" method="get">
+          <div class="form-catalog__wrapper  form-catalog__wrapper--closed  form-catalog__wrapper--nojs">
+            <fieldset>
+              <legend>Product</legend>
+              <div class="form-catalog__inner">
+                <input class="visually-hidden" id="necklaces" type="checkbox" name="product-necklaces" checked>
+                <label for="necklaces">Necklaces</label>
+                <input class="visually-hidden" id="chokers" type="checkbox" name="product-chokers" checked>
+                <label for="chokers">Chokers</label>
+                <input class="visually-hidden" id="rings" type="checkbox" name="product-rings">
+                <label for="rings">Rings</label>
+                <input class="visually-hidden" id="earrings" type="checkbox" name="product-earrings" checked>
+                <label for="earrings">Earrings</label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="form-catalog__wrapper  form-catalog__wrapper--closed  form-catalog__wrapper--nojs">
+            <fieldset>
+              <legend>Material</legend>
+              <div class="form-catalog__inner">
+                <input class="visually-hidden" id="gold" type="checkbox" name="product-gold">
+                <label for="gold">Gold</label>
+                <input class="visually-hidden" id="silver" type="checkbox" name="product-silver">
+                <label for="silver">Silver</label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="form-catalog__wrapper  form-catalog__wrapper--closed  form-catalog__wrapper--nojs">
+            <fieldset>
+              <legend>Collection</legend>
+              <div class="form-catalog__inner">
+                <input class="visually-hidden" id="pink-flamingo" type="checkbox" name="product-pink-flamingo">
+                <label for="pink-flamingo">Pink flamingo</label>
+                <input class="visually-hidden" id="dreams" type="checkbox" name="product-dreams">
+                <label for="dreams">Dreams</label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="form-catalog__wrapper  form-catalog__wrapper--price  form-catalog__wrapper--closed  form-catalog__wrapper--nojs">
+            <fieldset>
+              <legend>Price</legend>
+              <div class="form-catalog__inner  form-catalog__inner--price">
+                <div class="form-catalog__scale">
+                  <div class="form-catalog__bar"></div>
+                  <div class="form-catalog__toggle  form-catalog__toggle--min" tabindex="0"></div>
+                  <div class="form-catalog__toggle  form-catalog__toggle--max" tabindex="0"></div>
+                </div>
+                <span class="form-catalog__cost  form-catalog__cost--min">$ 55</span>
+                <span class="form-catalog__cost  form-catalog__cost--max">$ 155</span>
+              </div>
+            </fieldset>
+          </div>
+          <button class="form-catalog__button  form-catalog__button--apply" type="submit">Apply</button>
+          <button class="form-catalog__button  form-catalog__button--clear" type="button">Clear All</button>
+          <button class="form-catalog__close-button" type="button" aria-label="Close"></button>
+        </form>
+      </div>
+    </main>
+
+    <footer class="page-footer">
+    </footer>
+
+  </body>
+
+</html>

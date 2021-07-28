@@ -1,0 +1,239 @@
+.page-footer {
+  background-color: $black;
+}
+
+.page-footer__inner {
+  display: flex;
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 90px 25px 94px;
+
+  &--product-page {
+    padding: 90px 25px 69px;
+  }
+
+  @media (max-width: $tablet) {
+    flex-direction: column;
+    padding: 50px 45px 55px;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 50px 15px 34px;
+  }
+}
+
+.page-footer__subscribe {
+  flex-grow: 3;
+  max-width: 591px;
+  padding: 0 20px 0 0;
+
+  @media (max-width: $tablet) {
+    max-width: 82.6%;
+    margin: 0 0 40px;
+    padding: 0;
+  }
+
+  @media (max-width: $mobile) {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.page-footer__subscribe h2 {
+  margin: 0 0 10px;
+  font-family: $cormorant;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 44px;
+  letter-spacing: 0.02em;
+  color: $white;
+
+  @media (max-width: $mobile) {
+    max-width: 82.6%;
+    margin: 0 0 12px;
+  }
+}
+
+.page-footer__subscribe p {
+  margin: 0 0 35px;
+  color: $grey;
+
+  @media (max-width: $mobile) {
+    max-width: 82.6%;
+    line-height: 22px;
+  }
+}
+
+.page-footer__form {
+  position: relative;
+  max-width: 500px;
+  border-bottom: 1px solid $white;
+
+  @media (max-width: $tablet) {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.page-footer__form input {
+  width: 100%;
+  padding: 8px 110px 8px 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: $white;
+  background-color: transparent;
+  border: none;
+
+  &::placeholder {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: $grey;
+  }
+
+  &:hover,
+  &:focus {
+    &::placeholder {
+      opacity: 0.6;
+    }
+  }
+}
+
+.page-footer__form button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 7px 41px 9px 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: $white;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: 0;
+    width: 30px;
+    height: 11px;
+    background: url("../img/arrow-signup.svg") 0 0 no-repeat;
+  }
+
+  &:hover {
+    color: $brown;
+
+    &::after {
+      background: url("../img/arrow-signup-hover.svg") 0 0 no-repeat;
+    }
+  }
+
+  &:focus,
+  &:active {
+    color: $brown;
+    opacity: 0.6;
+
+    &::after {
+      background: url("../img/arrow-signup-hover.svg") 0 0 no-repeat;
+    }
+  }
+}
+
+.page-footer__menu-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 2;
+
+  @media (max-width: $tablet) {
+    max-width: 84.5%;
+  }
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.page-footer__menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0;
+  padding: 6px 0 0 0;
+  list-style: none;
+
+  &:not(:last-child) {
+    padding-right: 25px;
+  }
+
+  &:nth-child(2) {
+    margin-left: -33px;
+  }
+
+  @media (max-width: $tablet) {
+    &:nth-child(2) {
+      margin-left: 0;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    &:not(:last-child) {
+      margin: 0 0 34px;
+      padding-right: 0;
+    }
+
+    &--socials {
+      flex-direction: row;
+      margin: 5px 0 0 -4px;
+    }
+  }
+}
+
+.page-footer__item {
+  &:not(:last-child) {
+    margin-bottom: 21px;
+  }
+
+  @media (max-width: $mobile) {
+    &--socials {
+      margin: 0 28px 0 0;
+    }
+  }
+}
+
+.page-footer__link {
+  display: block;
+  font-weight: 500;
+  color: $white;
+  text-decoration: none;
+
+  &:hover {
+    color: $brown;
+  }
+
+  &:focus,
+  &:active {
+    color: $brown;
+    opacity: 0.6;
+  }
+}
+
+.page-footer__socials-icon {
+  margin: 0 10px 0 0;
+
+  @media (max-width: $mobile) {
+    width: 20px;
+    height: 21px;
+    margin: 0;
+  }
+}
+
+.page-footer__link-title {
+  @media (max-width: $mobile) {
+    display: none;
+  }
+}

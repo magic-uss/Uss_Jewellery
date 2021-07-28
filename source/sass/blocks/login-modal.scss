@@ -1,0 +1,251 @@
+.login-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 30;
+  display: none;
+  justify-content: center;
+  background-color: $white;
+  overflow: auto;
+
+  &--show {
+    display: flex;
+    align-items: center;
+  }
+
+  &--show-overflow {
+    display: flex;
+    align-items: flex-start;
+  }
+}
+
+.login-modal__wrapper {
+  position: relative;
+  width: 430px;
+  padding: 188px 45px 55px;
+  background: $light-brown url("../img/login-bg-desktop.jpg") center 0 / contain no-repeat;
+  box-shadow: 0 5px 32px transparentize($almost-white, 0.76);
+  overflow: visible;
+
+  @media (min-resolution: 2dppx) {
+    background: $light-brown url("../img/login-bg-desktop@2x.jpg") center 0 / contain no-repeat;
+  }
+
+  @media (max-width: $tablet) {
+    width: 442px;
+    padding: 188px 51px 55px;
+    background: $light-brown url("../img/login-bg-tablet.jpg") center 0 / contain no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background: $light-brown url("../img/login-bg-tablet@2x.jpg") center 0 / contain no-repeat;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    width: 84.4%;
+    padding: 121px 15px 40px;
+
+    background: $light-brown url("../img/login-bg-mobile.jpg") center 0 / contain no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background: $light-brown url("../img/login-bg-mobile@2x.jpg") center 0 / contain no-repeat;
+    }
+  }
+}
+
+.login-modal__wrapper h2 {
+  margin: 0 0 25px;
+  font-family: $cormorant;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 44px;
+  color: $dark-grey;
+  text-align: center;
+
+  @media (max-width: $mobile) {
+    margin: 0 0 19px;
+    font-size: 24px;
+    line-height: 31px;
+  }
+}
+
+.login-modal__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-modal__form input {
+  width: 100%;
+  margin: 0 0 27px;
+  padding: 8px 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: $dark-grey;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid $dark-grey;
+
+  &::placeholder {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: $grey;
+  }
+
+  @media (max-width: $mobile) {
+    margin: 0 0 22px;
+  }
+}
+
+.login-modal__forgot {
+  display: block;
+  align-self: flex-end;
+  margin: -22px 0 0;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: $grey;
+  text-decoration: none;
+  text-align: right;
+
+  &:hover,
+  &:focus {
+    color: $dark-grey;
+  }
+
+  &:active {
+    color: $dark-grey;
+    opacity: 0.6;
+  }
+
+  @media (max-width: $mobile) {
+    margin: -17px 0 0;
+  }
+}
+
+.login-modal__form button {
+  display: block;
+  margin: 45px 0 0;
+  width: 100%;
+  min-height: 68px;
+  padding: 22px 15px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  text-decoration: none;
+  color: $white;
+  background-color: $brown;
+  border: none;
+
+  &:hover,
+  &:focus {
+    background-color: $dark-grey;
+  }
+
+  &:active {
+    background-color: $dark-grey;
+    opacity: 0.6;
+  }
+
+  @media (max-width: $mobile) {
+    margin: 35px 0 0;
+  }
+}
+
+.login-modal__sign p {
+  margin: 0 8px 0 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: $grey;
+}
+
+.login-modal__sign {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0 0;
+  padding: 0 5px 0 0;
+}
+
+.login-modal__sign-link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: $dark-grey;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $brown;
+  }
+
+  &:active {
+    color: $brown;
+    opacity: 0.6;
+  }
+}
+
+.login-modal__close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 35px;
+  height: 35px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 14px;
+    height: 14px;
+    background: url("../img/close-button-black.svg") 0 0 / cover no-repeat;
+  }
+
+  &:hover {
+    &::before {
+      opacity: 0.6;
+    }
+  }
+
+  &:focus,
+  &:active {
+    &::before {
+      opacity: 0.3;
+    }
+  }
+
+  @media (max-width: $tablet) {
+    &::before {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    top: 5px;
+    right: 5px;
+
+    &::before {
+      width: 14px;
+      height: 14px;
+    }
+  }
+}
+
+.modal-main .login-modal {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.modal-main .login-modal__close-button {
+  display: none;
+}

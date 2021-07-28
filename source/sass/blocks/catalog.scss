@@ -1,0 +1,80 @@
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 30px;
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto 35px;
+  padding: 80px 25px 0;
+
+  @media (max-width: $tablet) {
+    display: block;
+    padding: 50px 45px 0;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 40px 15px 0;
+  }
+}
+
+.catalog__filter-button {
+  display: none;
+
+  @media (max-width: $tablet) {
+    display: block;
+    width: 100%;
+    min-height: 68px;
+    margin: 0 0 50px;
+    padding: 23px 15px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    color: $white;
+    text-decoration: none;
+    background-color: $brown;
+    border: none;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: $dark-grey;
+    }
+
+    &:active {
+      background-color: $dark-grey;
+      opacity: 0.6;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    margin: 0 0 40px;
+  }
+}
+
+.catalog__form-wrapper {
+  @media (max-width: $tablet) {
+    &--closed {
+      display: none;
+    }
+
+    &--opened {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 10;
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding: 28px 0 0;
+      background-color: $white;
+      overflow-y: scroll;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    padding: 76px 25px 0;
+  }
+}
