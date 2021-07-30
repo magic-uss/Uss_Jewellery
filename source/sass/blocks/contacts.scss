@@ -23,7 +23,7 @@
   }
 }
 
-.contacts__container {
+.contacts__inner {
   display: grid;
   grid-template-columns: 19.6% 34.2% 19.6% 19.6%;
   grid-row-gap: 34px;
@@ -45,7 +45,7 @@
   }
 }
 
-.contacts__container img {
+.contacts__inner img {
   display: block;
   width: 100%;
   object-fit: cover;

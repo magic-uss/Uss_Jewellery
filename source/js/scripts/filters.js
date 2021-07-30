@@ -1,11 +1,11 @@
 'use strict';
 
 (function () {
-  var tabs = document.querySelectorAll('.form-catalog__wrapper');
+  var filterTabs = document.querySelectorAll('.form-catalog__inner');
   var clearButton = document.querySelector('.form-catalog__button--clear');
   var inputs = document.querySelectorAll('.form-catalog__inner input');
   var openFilterButton = document.querySelector('.catalog__filter-button');
-  var filterForm = document.querySelector('.catalog__form-wrapper');
+  var filterForm = document.querySelector('.catalog__form');
   var closeButton = document.querySelector('.form-catalog__close-button');
 
   function isEnterEvent(evt) {
@@ -19,23 +19,24 @@
     }
   }
 
-  function toggleTabs(tab) {
-    if (tab.classList.contains('form-catalog__wrapper--closed')) {
-      tab.classList.remove('form-catalog__wrapper--closed');
-      tab.classList.add('form-catalog__wrapper--opened');
-
-    } else {
-      tab.classList.add('form-catalog__wrapper--closed');
-      tab.classList.remove('form-catalog__wrapper--opened');
+  function toggleTabs(item) {
+    if (item.classList.contains('form-catalog__inner--closed')) {
+      item.classList.remove('form-catalog__inner--closed');
+      item.classList.add('form-catalog__inner--opened');
+    } else if (item.classList.contains('form-catalog__inner--opened')) {
+      item.classList.add('form-catalog__inner--closed');
+      item.classList.remove('form-catalog__inner--opened');
     }
   }
 
-  if (tabs) {
-    tabs.forEach(function (tab) {
-      tab.classList.remove('form-catalog__wrapper--nojs');
+  if (filterTabs) {
+    filterTabs.forEach(function (filterTab) {
+      filterTab.classList.remove('form-catalog__inner--nojs');
 
-      tab.addEventListener('click', function () {
-        toggleTabs(tab);
+      filterTab.addEventListener('click', function (evt) {
+        if (evt.target === filterTab) {
+          toggleTabs(filterTab);
+        }
       });
 
       window.addEventListener('keydown', onTabEnterPress);
@@ -59,10 +60,16 @@
 
   if (clearButton && inputs) {
     clearButton.addEventListener('click', function (evt) {
-      evt.preventDefault();
-      clearInputs();
+      if (evt.target === clearButton) {
+        evt.preventDefault();
+        clearInputs();
+      }
     });
-    window.addEventListener('keydown', onClearEnterPress);
+    window.addEventListener('keydown', function (evt) {
+      if (evt.target === clearButton) {
+        onClearEnterPress(evt);
+      }
+    });
   }
 
   function isEscEvent(evt) {
@@ -87,23 +94,25 @@
   function onFilterEnterPress(evt) {
     if (isEnterEvent(evt)) {
       evt.preventDefault();
-      openFilter();
+      openFilter(evt);
     }
   }
 
-  function openFilter() {
-    filterForm.classList.remove('catalog__form-wrapper--closed');
-    filterForm.classList.add('catalog__form-wrapper--opened');
-    document.body.style.overflow = 'hidden';
+  function openFilter(evt) {
+    if (evt.target === openFilterButton) {
+      filterForm.classList.remove('catalog__form--closed');
+      filterForm.classList.add('catalog__form--opened');
+      document.body.style.overflow = 'hidden';
 
-    window.addEventListener('keydown', onFilterEscPress);
-    closeButton.addEventListener('click', closeFilter);
-    filterForm.addEventListener('click', onFilterOverlayPress);
+      window.addEventListener('keydown', onFilterEscPress);
+      closeButton.addEventListener('click', closeFilter);
+      filterForm.addEventListener('click', onFilterOverlayPress);
+    }
   }
 
   function closeFilter() {
-    filterForm.classList.remove('catalog__form-wrapper--opened');
-    filterForm.classList.add('catalog__form-wrapper--closed');
+    filterForm.classList.remove('catalog__form--opened');
+    filterForm.classList.add('catalog__form--closed');
     document.body.removeAttribute('style');
 
     window.removeEventListener('keydown', onFilterEscPress);
@@ -112,11 +121,11 @@
   }
 
   if (filterForm && openFilterButton && closeButton) {
-    filterForm.classList.remove('catalog__form-wrapper--nojs');
+    filterForm.classList.remove('catalog__form--nojs');
 
     openFilterButton.addEventListener('click', function (evt) {
       evt.preventDefault();
-      openFilter();
+      openFilter(evt);
     });
     window.addEventListener('keydown', onFilterEnterPress);
   }

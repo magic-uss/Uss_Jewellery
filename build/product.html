@@ -20,7 +20,7 @@
     <!-- page-header--closed - закрытое состояние меню, page-header--opened - открытое меню, page-header--nojs - состояние меню при отключеном js -->
     <header class="page-header  page-header--closed  page-header--nojs">
       <div class="page-header__user-menu  user-menu">
-        <div class="user-menu__inner">
+        <div class="user-menu__inner  container">
           <form class="user-menu__search-form" action="https://echo.htmlacademy.ru/" method="GET">
             <label class="visually-hidden" for="search">Enter text to search:</label>
             <input type="search" name="search" id="search" placeholder="Type here to search">
@@ -29,12 +29,12 @@
             </svg>
           </form>
           <button class="user-menu__nav-toggle" type="button" aria-label="Open menu"></button>
-          <a class="user-menu__logo-link  user-menu__logo-link--active" href="main.html">
+          <a class="user-menu__logo-link" href="main.html">
             <svg class="user-menu__logo" width="66" height="66" role="img" aria-label="Jewellery shop «CH» logo.">
               <use xlink:href="./img/sprite.svg#logo"></use>
             </svg>
           </a>
-          <div class="user-menu__user">
+          <div class="user-menu__user-wrapper">
             <a class="user-menu__user-link  user-menu__user-link--login  login-link" href="login.html">Login</a>
             <a class="user-menu__user-link  user-menu__user-link--cart" href="#">
               <svg class="user-menu__cart-icon" width="20" height="18" aria-hidden="true" focusable="false">
@@ -47,7 +47,7 @@
         </div>
       </div>
       <nav class="page-header__site-menu  site-menu">
-        <ul class="site-menu__list">
+        <ul class="site-menu__inner  container">
           <li class="site-menu__item">
             <a class="site-menu__link" href="#">What’s new</a>
           </li>
@@ -76,7 +76,7 @@
           <a class="about-menu__link" href="#">Contact Us</a>
         </li>
       </ul>
-      <div class="page-header__login">
+      <div class="page-header__login-wrapper">
         <a class="page-header__login-link  login-link" href="login.html">Login</a>
       </div>
     </header>
@@ -85,7 +85,7 @@
       <h1 class="visually-hidden">Gold Necklace of jewellery shop «CH»</h1>
 
       <section class="product">
-        <div class="product__wrapper">
+        <div class="product__inner  container">
           <div class="product__slider" data-mobile="false">
             <div class="product__gallery">
               <div class="swiper-slide  product__slide">
@@ -166,16 +166,14 @@
               <dt>Size</dt>
               <dd>18” / 20”</dd>
             </dl>
-            <div class="product__feature  product__feature--additional-info">
-              <dl>
-                <dt>Metal type</dt>
-                <dd>Gold 585</dd>
-                <dt>Stone</dt>
-                <dd>Turquoise</dd>
-                <dt>Size</dt>
-                <dd>18” / 20”</dd>
-              </dl>
-            </div>
+            <dl class="product__feature  product__feature--additional-info">
+              <dt>Metal type</dt>
+              <dd>Gold 585</dd>
+              <dt>Stone</dt>
+              <dd>Turquoise</dd>
+              <dt>Size</dt>
+              <dd>18” / 20”</dd>
+            </dl>
             <a class="product__cart-button" href="add-cart.html">Add to cart</a>
             <ul class="product__warranty-list">
               <li class="product__warranty-item">14 Day Returns</li>
@@ -186,14 +184,14 @@
         </div>
       </section>
 
-      <section class="section  slider  slider--product-page">
+      <section class="section  slider  slider--product-page  container">
         <h2>You May Also Like</h2>
         <a class="section__link" href="#">Shop Now</a>
         <a class="swiper-button-prev  slider__pagination-button  slider__pagination-button--left" href="#" aria-label="Back"></a>
         <a class="swiper-button-next  slider__pagination-button  slider__pagination-button--right" href="#" aria-label="Forward"></a>
         <div class="swiper-container  slider__container">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">
+            <div class="swiper-slide  slider__slide">
               <a class="slider__item" href="#">
                 <div class="slider__img-wrapper">
                   <picture>
@@ -212,7 +210,7 @@
                 <span>$ 145</span>
               </a>
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide  slider__slide">
               <a class="slider__item" href="#">
                 <div class="slider__img-wrapper">
                   <picture>
@@ -231,7 +229,7 @@
                 <span>$ 115</span>
               </a>
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide  slider__slide">
               <a class="slider__item" href="#">
                 <div class="slider__img-wrapper">
                   <picture>
@@ -250,7 +248,7 @@
                 <span>$ 215</span>
               </a>
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide  slider__slide">
               <a class="slider__item" href="#">
                 <div class="slider__img-wrapper">
                   <picture>
@@ -269,7 +267,7 @@
                 <span>$ 95</span>
               </a>
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide  slider__slide">
               <a class="slider__item" href="#">
                 <div class="slider__img-wrapper">
                   <picture>
@@ -288,7 +286,7 @@
                 <span>$ 115</span>
               </a>
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide  slider__slide">
               <a class="slider__item" href="#">
                 <div class="slider__img-wrapper">
                   <picture>
@@ -307,7 +305,7 @@
                 <span>$ 55</span>
               </a>
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide  slider__slide">
               <a class="slider__item" href="#">
                 <div class="slider__img-wrapper">
                   <picture>
@@ -326,7 +324,7 @@
                 <span>$ 105</span>
               </a>
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide  slider__slide">
               <a class="slider__item" href="#">
                 <div class="slider__img-wrapper">
                   <picture>
@@ -345,7 +343,7 @@
                 <span>$ 75</span>
               </a>
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide  slider__slide">
               <a class="slider__item" href="#">
                 <div class="slider__img-wrapper">
                   <picture>
@@ -364,7 +362,7 @@
                 <span>$ 135</span>
               </a>
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide  slider__slide">
               <a class="slider__item" href="#">
                 <div class="slider__img-wrapper">
                   <picture>
@@ -383,7 +381,7 @@
                 <span>$ 85</span>
               </a>
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide  slider__slide">
               <a class="slider__item" href="#">
                 <div class="slider__img-wrapper">
                   <picture>
@@ -402,7 +400,7 @@
                 <span>$ 95</span>
               </a>
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide  slider__slide">
               <a class="slider__item" href="#">
                 <div class="slider__img-wrapper">
                   <picture>
@@ -428,7 +426,7 @@
     </main>
 
     <footer class="page-footer">
-      <div class="page-footer__inner  page-footer__inner--product-page">
+      <div class="page-footer__inner  page-footer__inner--product-page  container">
         <div class="page-footer__subscribe">
           <h2>The good stuff in your inbox</h2>
           <p>News and updates from CH. No spam, we promise.</p>
@@ -507,7 +505,7 @@
 
     <!-- cart-modal--show - открытый попап, cart-modal--show-overflow - открытый попап при высоте экрана меньше попапа -->
     <section class="cart-modal">
-      <div class="cart-modal__wrapper">
+      <div class="cart-modal__content">
         <h2>The item was added to&nbsp;your cart</h2>
         <div class="cart-modal__item-wrapper">
           <div class="cart-modal__img-wrapper">
@@ -539,7 +537,7 @@
         </div>
         <div class="cart-modal__button-wrapper">
           <a class="cart-modal__button  cart-modal__button--shop" href="catalog.html">Continue shopping</a>
-          <a class="cart-modal__button  cart-modal__button--cart" href="#">Checkout</a>
+          <a class="cart-modal__button  cart-modal__button--cart" href="cart.html">Checkout</a>
         </div>
         <button class="cart-modal__close-button" type="button" aria-label="Close"></button>
       </div>
@@ -547,7 +545,7 @@
 
     <!-- login-modal--show - открытый попап, login-modal--show-overflow - открытый попап при высоте экрана меньше попапа -->
     <section class="login-modal">
-      <div class="login-modal__wrapper">
+      <div class="login-modal__content">
         <h2>Log In</h2>
         <form class="login-modal__form  form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="visually-hidden" for="email-modal">Ваш электронный адрес:</label>
@@ -557,7 +555,7 @@
           <a class="login-modal__forgot" href="#">Forgot your password?</a>
           <button type="submit">Log In</button>
         </form>
-        <div class="login-modal__sign">
+        <div class="login-modal__sign-wrapper">
           <p>Don’t have an account?</p>
           <a class="login-modal__sign-link" href="#">Sign up</a>
         </div>

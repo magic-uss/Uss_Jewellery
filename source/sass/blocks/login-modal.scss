@@ -19,9 +19,15 @@
     display: flex;
     align-items: flex-start;
   }
+
+  &--nojs {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
 }
 
-.login-modal__wrapper {
+.login-modal__content {
   position: relative;
   width: 430px;
   padding: 188px 45px 55px;
@@ -55,7 +61,7 @@
   }
 }
 
-.login-modal__wrapper h2 {
+.login-modal__content h2 {
   margin: 0 0 25px;
   font-family: $cormorant;
   font-weight: 700;
@@ -156,7 +162,7 @@
   }
 }
 
-.login-modal__sign p {
+.login-modal__sign-wrapper p {
   margin: 0 8px 0 0;
   font-weight: 500;
   font-size: 14px;
@@ -164,7 +170,7 @@
   color: $grey;
 }
 
-.login-modal__sign {
+.login-modal__sign-wrapper {
   display: flex;
   justify-content: center;
   margin: 15px 0 0;
@@ -209,6 +215,10 @@
     background: url("../img/close-button-black.svg") 0 0 / cover no-repeat;
   }
 
+  &--nojs {
+    display: none;
+  }
+
   &:hover {
     &::before {
       opacity: 0.6;
@@ -238,14 +248,4 @@
       height: 14px;
     }
   }
-}
-
-.modal-main .login-modal {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.modal-main .login-modal__close-button {
-  display: none;
 }

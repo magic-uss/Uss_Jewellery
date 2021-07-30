@@ -22,16 +22,17 @@
       </a>
     </header>
 
-    <main>
+    <main class="modal-main">
       <h1 class="visually-hidden">Product catalog filter of jewellery shop «CH»</h1>
 
-      <div class="modal-main">
+      <div class="modal-main__inner">
         <a class="modal-main__link" href="main.html">Back to the main page</a>
-        <form class="form-catalog" action="https://echo.htmlacademy.ru/" method="get">
-          <div class="form-catalog__wrapper  form-catalog__wrapper--closed  form-catalog__wrapper--nojs">
+        <form class="form-catalog  form-catalog--nojs" action="https://echo.htmlacademy.ru/" method="get">
+          <!-- form-catalog__inner--closed - закрытый таб, form-catalog__inner--opened - открытый таб, form-catalog__inner--nojs - состояние таба при отключеном js -->
+          <div class="form-catalog__inner  form-catalog__inner--closed  form-catalog__inner--nojs" tabindex="0">
             <fieldset>
               <legend>Product</legend>
-              <div class="form-catalog__inner">
+              <div class="form-catalog__input-wrapper">
                 <input class="visually-hidden" id="necklaces" type="checkbox" name="product-necklaces" checked>
                 <label for="necklaces">Necklaces</label>
                 <input class="visually-hidden" id="chokers" type="checkbox" name="product-chokers" checked>
@@ -43,10 +44,10 @@
               </div>
             </fieldset>
           </div>
-          <div class="form-catalog__wrapper  form-catalog__wrapper--closed  form-catalog__wrapper--nojs">
+          <div class="form-catalog__inner  form-catalog__inner--closed  form-catalog__inner--nojs" tabindex="0">
             <fieldset>
               <legend>Material</legend>
-              <div class="form-catalog__inner">
+              <div class="form-catalog__input-wrapper">
                 <input class="visually-hidden" id="gold" type="checkbox" name="product-gold">
                 <label for="gold">Gold</label>
                 <input class="visually-hidden" id="silver" type="checkbox" name="product-silver">
@@ -54,10 +55,10 @@
               </div>
             </fieldset>
           </div>
-          <div class="form-catalog__wrapper  form-catalog__wrapper--closed  form-catalog__wrapper--nojs">
+          <div class="form-catalog__inner  form-catalog__inner--closed  form-catalog__inner--nojs" tabindex="0">
             <fieldset>
               <legend>Collection</legend>
-              <div class="form-catalog__inner">
+              <div class="form-catalog__input-wrapper">
                 <input class="visually-hidden" id="pink-flamingo" type="checkbox" name="product-pink-flamingo">
                 <label for="pink-flamingo">Pink flamingo</label>
                 <input class="visually-hidden" id="dreams" type="checkbox" name="product-dreams">
@@ -65,10 +66,10 @@
               </div>
             </fieldset>
           </div>
-          <div class="form-catalog__wrapper  form-catalog__wrapper--price  form-catalog__wrapper--closed  form-catalog__wrapper--nojs">
+          <div class="form-catalog__inner  form-catalog__inner--price  form-catalog__inner--price-nojs  form-catalog__inner--closed  form-catalog__inner--nojs" tabindex="0">
             <fieldset>
               <legend>Price</legend>
-              <div class="form-catalog__inner  form-catalog__inner--price">
+              <div class="form-catalog__input-wrapper  form-catalog__input-wrapper--price">
                 <div class="form-catalog__scale">
                   <div class="form-catalog__bar"></div>
                   <div class="form-catalog__toggle  form-catalog__toggle--min" tabindex="0"></div>
@@ -80,7 +81,7 @@
             </fieldset>
           </div>
           <button class="form-catalog__button  form-catalog__button--apply" type="submit">Apply</button>
-          <button class="form-catalog__button  form-catalog__button--clear" type="button">Clear All</button>
+          <button class="form-catalog__button  form-catalog__button--clear  form-catalog__button--nojs" type="button">Clear All</button>
           <button class="form-catalog__close-button" type="button" aria-label="Close"></button>
         </form>
       </div>

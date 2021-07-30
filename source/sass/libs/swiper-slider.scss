@@ -144,53 +144,11 @@
   --swiper-navigation-color: var(--swiper-theme-color);
   */
 }
-.swiper-button-prev,
-.swiper-button-next {
-  // position: absolute;
-  // top: 50%;
-  // width: calc(var(--swiper-navigation-size) / 44 * 27);
-  // height: var(--swiper-navigation-size);
-  // margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
-  // z-index: 10;
-  // cursor: pointer;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
-  // color: var(--swiper-navigation-color, var(--swiper-theme-color));
-}
 .swiper-button-prev.swiper-button-disabled,
 .swiper-button-next.swiper-button-disabled {
   opacity: 0.35;
   cursor: auto;
   pointer-events: none;
-}
-.swiper-button-prev:after,
-.swiper-button-next:after {
-  // font-family: swiper-icons;
-  // font-size: var(--swiper-navigation-size);
-  // text-transform: none !important;
-  // letter-spacing: 0;
-  // text-transform: none;
-  // font-variant: initial;
-  // line-height: 1;
-}
-.swiper-button-prev,
-.swiper-container-rtl .swiper-button-next {
-  // left: 10px;
-  // right: auto;
-}
-.swiper-button-prev:after,
-.swiper-container-rtl .swiper-button-next:after {
-  // content: 'prev';
-}
-.swiper-button-next,
-.swiper-container-rtl .swiper-button-prev {
-  // right: 10px;
-  // left: auto;
-}
-.swiper-button-next:after,
-.swiper-container-rtl .swiper-button-prev:after {
-  // content: 'next';
 }
 .swiper-button-prev.swiper-button-white,
 .swiper-button-next.swiper-button-white {
@@ -209,7 +167,6 @@
   */
 }
 .swiper-pagination {
-  // position: absolute;
   text-align: center;
   transition: 300ms opacity;
   transform: translate3d(0, 0, 0);
@@ -254,15 +211,9 @@
   transform: scale(0.33);
 }
 .swiper-pagination-bullet {
-  // width: 8px;
-  // height: 8px;
-  // display: inline-block;
-  // border-radius: 50%;
-  // background: #000;
-  // opacity: 0.2;
   padding: 2px 4px;
   font-weight: 500;
-  color: $grey;
+  color: #9b9997;
   text-decoration: none;
 
   &:not(:last-child) {
@@ -270,12 +221,12 @@
   }
 
   &:hover {
-    color: $dark-grey;
+    color: #1d1613;
   }
 
   &:focus,
   &:active {
-    color: $dark-grey;
+    color: #1d1613;
     opacity: 0.6;
   }
 }
@@ -291,9 +242,8 @@ button.swiper-pagination-bullet {
   cursor: pointer;
 }
 .swiper-pagination-bullet-active {
-  color: $dark-grey;
+  color: #1d1613;
   opacity: 1;
-  // background: var(--swiper-pagination-color, var(--swiper-theme-color));
 
   &:hover {
     opacity: 0.6;

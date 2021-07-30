@@ -20,7 +20,16 @@
   }
 }
 
-.page-header__login {
+.page-header__user-menu {
+  display: flex;
+  border-bottom: 1px solid $light-grey;
+
+  @media (max-width: $tablet) {
+    border: transparent;
+  }
+}
+
+.page-header__login-wrapper {
   display: none;
 
   @media (max-width: $tablet) {
@@ -55,11 +64,11 @@
 }
 
 @media (max-width: $tablet) {
-  .page-header--closed .page-header__login {
+  .page-header--closed .page-header__login-wrapper {
     display: none;
   }
 
-  .page-header--nojs .page-header__login {
+  .page-header--nojs .page-header__login-wrapper {
     display: block;
   }
 }

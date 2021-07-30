@@ -3,8 +3,7 @@
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 30px;
   width: 100%;
-  max-width: 1220px;
-  margin: 0 auto 35px;
+  margin-bottom: 35px;
   padding: 80px 25px 0;
 
   @media (max-width: $tablet) {
@@ -52,7 +51,7 @@
   }
 }
 
-.catalog__form-wrapper {
+.catalog__form {
   @media (max-width: $tablet) {
     &--closed {
       display: none;

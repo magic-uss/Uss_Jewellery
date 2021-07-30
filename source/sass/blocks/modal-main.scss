@@ -1,4 +1,4 @@
-.modal-main {
+.modal-main__inner {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,6 +11,15 @@
   @media (max-width: $mobile) {
     padding: 30px 15px;
   }
+}
+
+.modal-main__inner h2 {
+  font-family: $cormorant;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 34px;
+  color: $dark-grey;
+  text-align: center;
 }
 
 .modal-main__link {

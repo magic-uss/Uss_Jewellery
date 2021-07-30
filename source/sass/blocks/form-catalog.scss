@@ -3,6 +3,10 @@
   flex-direction: column;
   margin: 0 20px 0 0;
 
+  &--nojs {
+    margin: 0;
+  }
+
   @media (max-width: $tablet) {
     position: relative;
     width: 55%;
@@ -15,7 +19,7 @@
   }
 }
 
-.form-catalog__wrapper {
+.form-catalog__inner {
   position: relative;
   margin: 0;
   padding: 0 55px 16px 25px;
@@ -38,6 +42,10 @@
 
   &--price {
     padding: 0 20px 18px 25px;
+  }
+
+  &--price-nojs {
+    padding: 0 25px 23px 21px;
   }
 
   &--closed {
@@ -117,7 +125,7 @@
   }
 }
 
-.form-catalog__wrapper--price.form-catalog__wrapper--nojs {
+.form-catalog__inner--price.form-catalog__inner--nojs {
   padding: 0 20px 18px 25px;
 
   @media (max-width: $tablet) {
@@ -129,13 +137,13 @@
   }
 }
 
-.form-catalog__wrapper fieldset {
+.form-catalog__inner fieldset {
   margin: 0;
   padding: 0;
   border: none;
 }
 
-.form-catalog__wrapper legend {
+.form-catalog__inner legend {
   padding: 23px 0;
   font-weight: 500;
   font-size: 16px;
@@ -158,7 +166,7 @@
   }
 }
 
-.form-catalog__wrapper--closed legend {
+.form-catalog__inner--closed legend {
   padding: 22px 0 23px;
 
   @media (max-width: $tablet) {
@@ -170,7 +178,7 @@
   }
 }
 
-.form-catalog__wrapper label {
+.form-catalog__inner label {
   position: relative;
   margin: 0 0 12px;
   padding: 0 0 0 34px;
@@ -202,7 +210,7 @@
   }
 }
 
-.form-catalog__inner {
+.form-catalog__input-wrapper {
   flex-direction: column;
 
   @media (max-width: $tablet) {
@@ -218,23 +226,23 @@
   }
 }
 
-.form-catalog__wrapper--closed .form-catalog__inner {
+.form-catalog__inner--closed .form-catalog__input-wrapper {
   display: none;
 }
 
-.form-catalog__wrapper--nojs .form-catalog__inner {
+.form-catalog__inner--nojs .form-catalog__input-wrapper {
   display: flex;
 }
 
-.form-catalog__wrapper--opened .form-catalog__inner {
+.form-catalog__inner--opened .form-catalog__input-wrapper {
   display: flex;
 }
 
-.form-catalog__wrapper--nojs .form-catalog__inner--price {
+.form-catalog__inner--nojs .form-catalog__input-wrapper--price {
   display: block;
 }
 
-.form-catalog__wrapper--opened .form-catalog__inner--price {
+.form-catalog__inner--opened .form-catalog__input-wrapper--price {
   display: block;
 }
 
@@ -350,34 +358,34 @@
   }
 }
 
-.form-catalog__inner input:checked + label::before {
+.form-catalog__input-wrapper input:checked + label::before {
   background-color: $brown;
 }
 
-.form-catalog__inner input:hover + label::before,
-.form-catalog__inner input:focus + label::before {
+.form-catalog__input-wrapper input:hover + label::before,
+.form-catalog__input-wrapper input:focus + label::before {
   border: 1px solid $dark-grey;
 }
 
-.form-catalog__inner input:checked:hover + label::before,
-.form-catalog__inner input:checked:focus + label::before {
+.form-catalog__input-wrapper input:checked:hover + label::before,
+.form-catalog__input-wrapper input:checked:focus + label::before {
   background-color: $dark-grey;
 }
 
-.form-catalog__inner input:active + label::before {
+.form-catalog__input-wrapper input:active + label::before {
   opacity: 0.6;
 }
 
-.form-catalog__inner input:disabled + label::before {
+.form-catalog__input-wrapper input:disabled + label::before {
   opacity: 0.3;
 }
 
-.form-catalog__inner input:hover + label,
-.form-catalog__inner input:focus + label {
+.form-catalog__input-wrapper input:hover + label,
+.form-catalog__input-wrapper input:focus + label {
   color: $brown;
 }
 
-.form-catalog__inner input:active + label {
+.form-catalog__input-wrapper input:active + label {
   color: $brown;
   opacity: 0.6;
 }
@@ -403,6 +411,10 @@
     color: $dark-grey;
     background-color: transparent;
     border: 1px solid $brown;
+  }
+
+  &--nojs {
+    display: none;
   }
 
   &--apply:hover,
@@ -492,23 +504,15 @@
 }
 
 @media (max-width: $tablet) {
-  .catalog__form-wrapper--closed .form-catalog__close-button {
+  .catalog__form--closed .form-catalog__close-button {
     display: none;
   }
 
-  .catalog__form-wrapper--opened .form-catalog__close-button {
+  .catalog__form--opened .form-catalog__close-button {
     display: block;
   }
 }
 
-.modal-main .form-catalog__button--clear {
+.catalog__form--nojs .form-catalog__button--clear {
   display: none;
-}
-
-.catalog__form-wrapper--nojs .form-catalog__button--clear {
-  display: none;
-}
-
-.modal-main .form-catalog__wrapper--price {
-  padding: 0 25px 23px 21px;
 }

@@ -3,7 +3,7 @@
 (function () {
   var openLoginButtons = document.querySelectorAll('.login-link');
   var modal = document.querySelector('.login-modal');
-  var modalContent = document.querySelector('.login-modal__wrapper');
+  var modalContent = document.querySelector('.login-modal__content');
   var closeButton = document.querySelector('.login-modal__close-button');
   var isStorageSupport = true;
   var storageEmail = '';

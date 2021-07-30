@@ -1,4 +1,4 @@
-.main-main {
+.intro {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,6 +11,16 @@
     background: $brown url("../img/main-main-bg-desktop@2x.jpg") center 0 / cover no-repeat;
   }
 
+  &--inner {
+    height: 261px;
+    margin: 0;
+    background: $brown url("../img/catalog-main-bg-desktop.jpg") center 0 / cover no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background: $brown url("../img/catalog-main-bg-desktop@2x.jpg") center 0 / cover no-repeat;
+    }
+  }
+
   @media (max-width: $tablet) {
     margin: 0 0 60px;
     padding: 0 15px 0 0;
@@ -18,6 +28,15 @@
 
     @media (min-resolution: 2dppx) {
       background: $brown url("../img/main-main-bg-tablet@2x.jpg") center 0 / cover no-repeat;
+    }
+
+    &--inner {
+      margin: 0;
+      background: $brown url("../img/catalog-main-bg-tablet.jpg") center 0 / cover no-repeat;
+
+      @media (min-resolution: 2dppx) {
+        background: $brown url("../img/catalog-main-bg-tablet@2x.jpg") center 0 / cover no-repeat;
+      }
     }
   }
 
@@ -29,11 +48,19 @@
     @media (min-resolution: 2dppx) {
       background: $brown url("../img/main-main-bg-mobile@2x.jpg") center 0 / cover no-repeat;
     }
+
+    &--inner {
+      margin: 0;
+      background: $brown url("../img/catalog-main-bg-mobile.jpg") center 0 / cover no-repeat;
+
+      @media (min-resolution: 2dppx) {
+        background: $brown url("../img/catalog-main-bg-mobile@2x.jpg") center 0 / cover no-repeat;
+      }
+    }
   }
 }
 
-.main-main__title {
-  max-width: 1220px;
+.intro__title {
   font-family: $cormorant;
   font-weight: 700;
   font-size: 45px;
@@ -42,14 +69,30 @@
   text-transform: uppercase;
   color: $white;
 
+  &--inner {
+    font-size: 34px;
+    line-height: 44px;
+    letter-spacing: normal;
+  }
+
+  @media (max-width: $tablet) {
+    padding: 0 25px;
+  }
+
   @media (max-width: $mobile) {
+    padding: 0 15px;
     font-size: 38px;
     line-height: 49px;
+
+    &--inner {
+      font-size: 34px;
+      line-height: 44px;
+      letter-spacing: normal;
+    }
   }
 }
 
-.main-main__text {
-  max-width: 1220px;
+.intro__text {
   font-family: $cormorant;
   font-style: italic;
   font-weight: 400;
@@ -57,8 +100,25 @@
   line-height: 49px;
   color: $white;
 
+  &--inner {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 29px;
+  }
+
+  @media (max-width: $tablet) {
+    padding: 0 25px;
+  }
+
   @media (max-width: $mobile) {
+    padding: 0 15px;
     font-size: 34px;
     line-height: 44px;
+
+    &--inner {
+      font-size: 22px;
+      line-height: 26px;
+      text-align: center;
+    }
   }
 }

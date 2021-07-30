@@ -8,6 +8,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CH Jewellery</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" as="image" href="./img/main-main-bg-mobile.jpg">
+    <link rel="preload" as="image" href="./img/main-main-bg-mobile@2x.jpg">
     <link rel="preload" href="./fonts/poppins-v15-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="./fonts/poppins-v15-latin-500.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="./fonts/poppins-v15-latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -20,7 +22,7 @@
     <!-- page-header--closed - закрытое состояние меню, page-header--opened - открытое меню, page-header--nojs - состояние меню при отключеном js -->
     <header class="page-header  page-header--closed  page-header--nojs">
       <div class="page-header__user-menu  user-menu">
-        <div class="user-menu__inner">
+        <div class="user-menu__inner  container">
           <form class="user-menu__search-form" action="https://echo.htmlacademy.ru/" method="GET">
             <label class="visually-hidden" for="search">Enter text to search:</label>
             <input type="search" name="search" id="search" placeholder="Type here to search">
@@ -34,7 +36,7 @@
               <use xlink:href="./img/sprite.svg#logo"></use>
             </svg>
           </a>
-          <div class="user-menu__user">
+          <div class="user-menu__user-wrapper">
             <a class="user-menu__user-link  user-menu__user-link--login  login-link" href="login.html">Login</a>
             <a class="user-menu__user-link  user-menu__user-link--cart" href="#">
               <svg class="user-menu__cart-icon" width="20" height="18" aria-hidden="true" focusable="false">
@@ -47,7 +49,7 @@
         </div>
       </div>
       <nav class="page-header__site-menu  site-menu">
-        <ul class="site-menu__list">
+        <ul class="site-menu__inner  container">
           <li class="site-menu__item">
             <a class="site-menu__link" href="#">What’s new</a>
           </li>
@@ -76,7 +78,7 @@
           <a class="about-menu__link" href="#">Contact Us</a>
         </li>
       </ul>
-      <div class="page-header__login">
+      <div class="page-header__login-wrapper">
         <a class="page-header__login-link  login-link" href="login.html">Login</a>
       </div>
     </header>
@@ -84,19 +86,19 @@
     <main>
       <h1 class="visually-hidden">Jewellery shop «CH»</h1>
 
-      <div class="main-main">
-        <span class="main-main__title">perfection</span>
-        <span class="main-main__text">made to be yours</span>
+      <div class="intro">
+        <span class="intro__title  container">perfection</span>
+        <span class="intro__text  container">made to be yours</span>
       </div>
 
-      <section class="section  slider">
+      <section class="section  slider  container">
         <h2>New In</h2>
         <a class="section__link" href="#">Shop Now</a>
         <a class="swiper-button-prev  slider__pagination-button  slider__pagination-button--left" href="#" aria-label="Back"></a>
         <a class="swiper-button-next  slider__pagination-button  slider__pagination-button--right" href="#" aria-label="Forward"></a>
         <div class="swiper-container  slider__container">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">
+            <div class="swiper-slide  slider__slide">
               <a class="slider__item" href="#">
                 <div class="slider__img-wrapper">
                   <picture>
@@ -115,7 +117,7 @@
                 <span>$ 145</span>
               </a>
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide  slider__slide">
               <a class="slider__item" href="#">
                 <div class="slider__img-wrapper">
                   <picture>
@@ -134,7 +136,7 @@
                 <span>$ 115</span>
               </a>
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide  slider__slide">
               <a class="slider__item" href="#">
                 <div class="slider__img-wrapper">
                   <picture>
@@ -153,7 +155,7 @@
                 <span>$ 215</span>
               </a>
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide  slider__slide">
               <a class="slider__item" href="#">
                 <div class="slider__img-wrapper">
                   <picture>
@@ -172,7 +174,7 @@
                 <span>$ 95</span>
               </a>
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide  slider__slide">
               <a class="slider__item" href="#">
                 <div class="slider__img-wrapper">
                   <picture>
@@ -191,7 +193,7 @@
                 <span>$ 115</span>
               </a>
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide  slider__slide">
               <a class="slider__item" href="#">
                 <div class="slider__img-wrapper">
                   <picture>
@@ -210,7 +212,7 @@
                 <span>$ 55</span>
               </a>
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide  slider__slide">
               <a class="slider__item" href="#">
                 <div class="slider__img-wrapper">
                   <picture>
@@ -229,7 +231,7 @@
                 <span>$ 105</span>
               </a>
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide  slider__slide">
               <a class="slider__item" href="#">
                 <div class="slider__img-wrapper">
                   <picture>
@@ -248,7 +250,7 @@
                 <span>$ 75</span>
               </a>
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide  slider__slide">
               <a class="slider__item" href="#">
                 <div class="slider__img-wrapper">
                   <picture>
@@ -267,7 +269,7 @@
                 <span>$ 135</span>
               </a>
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide  slider__slide">
               <a class="slider__item" href="#">
                 <div class="slider__img-wrapper">
                   <picture>
@@ -286,7 +288,7 @@
                 <span>$ 85</span>
               </a>
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide  slider__slide">
               <a class="slider__item" href="#">
                 <div class="slider__img-wrapper">
                   <picture>
@@ -305,7 +307,7 @@
                 <span>$ 95</span>
               </a>
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide  slider__slide">
               <a class="slider__item" href="#">
                 <div class="slider__img-wrapper">
                   <picture>
@@ -329,11 +331,11 @@
         <div class="swiper-pagination  slider__pagination"></div>
       </section>
 
-      <section class="section  blog">
+      <section class="section  blog  container">
         <h2>Blog</h2>
         <a class="section__link" href="#">Read All</a>
-        <div class="blog__container">
-          <article class="blog__article">
+        <div class="blog__inner">
+          <article class="blog__article-wrapper">
             <div class="blog__img-wrapper">
               <picture>
                 <!-- 1х: 290px; 2x: 580px -->
@@ -353,7 +355,7 @@
               <a class="blog__info-link" href="#">Read Article</a>
             </div>
           </article>
-          <article class="blog__article">
+          <article class="blog__article-wrapper">
             <div class="blog__img-wrapper">
               <picture>
                 <!-- 1х: 290px; 2x: 580px -->
@@ -373,7 +375,7 @@
               <a class="blog__info-link" href="#">Read Article</a>
             </div>
           </article>
-          <article class="blog__article">
+          <article class="blog__article-wrapper">
             <div class="blog__img-wrapper">
               <picture>
                 <!-- 1х: 290px; 2x: 580px -->
@@ -396,33 +398,33 @@
         </div>
       </section>
 
-      <section class="section  faq">
+      <section class="section  faq  container">
         <h2>Frequently asked questions</h2>
         <ul class="faq__list">
           <!-- faq__item--closed - закрытый таб, faq__item--opened - открытый таб, faq__item--nojs - состояние таба при отключеном js -->
-          <li class="faq__item  faq__item--closed  faq__item--nojs">
+          <li class="faq__item  faq__item--closed  faq__item--nojs" tabindex="0">
             <h3>What materials are <br>the jewellery made of?</h3>
             <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
           </li>
-          <li class="faq__item  faq__item--closed  faq__item--nojs">
+          <li class="faq__item  faq__item--closed  faq__item--nojs" tabindex="0">
             <h3>Which countries <br>do you deliver to?</h3>
             <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
           </li>
-          <li class="faq__item  faq__item--closed  faq__item--nojs">
+          <li class="faq__item  faq__item--closed  faq__item--nojs" tabindex="0">
             <h3>What are the <br>payment methods?</h3>
             <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
           </li>
-          <li class="faq__item  faq__item--closed  faq__item--nojs">
+          <li class="faq__item  faq__item--closed  faq__item--nojs" tabindex="0">
             <h3>Can I return the <br>jewellery if it didn’t fit me?</h3>
             <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
           </li>
         </ul>
       </section>
 
-      <section class="section  contacts">
+      <section class="section  contacts  container">
         <h2>@Chjewellery</h2>
         <a class="section__link  contacts__link" href="#">Follow Us</a>
-        <div class="contacts__container">
+        <div class="contacts__inner">
           <div class="contacts__img-wrapper">
             <picture>
               <!-- 1х: 133px; 2x: 266px -->
@@ -513,7 +515,7 @@
     </main>
 
     <footer class="page-footer">
-      <div class="page-footer__inner">
+      <div class="page-footer__inner  container">
         <div class="page-footer__subscribe">
           <h2>The good stuff in your inbox</h2>
           <p>News and updates from CH. No spam, we promise.</p>
@@ -592,7 +594,7 @@
 
     <!-- login-modal--show - открытый попап, login-modal--show-overflow - открытый попап при высоте экрана меньше попапа -->
     <section class="login-modal">
-      <div class="login-modal__wrapper">
+      <div class="login-modal__content">
         <h2>Log In</h2>
         <form class="login-modal__form  form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="visually-hidden" for="email-modal">Ваш электронный адрес:</label>
@@ -602,7 +604,7 @@
           <a class="login-modal__forgot" href="#">Forgot your password?</a>
           <button type="submit">Log In</button>
         </form>
-        <div class="login-modal__sign">
+        <div class="login-modal__sign-wrapper">
           <p>Don’t have an account?</p>
           <a class="login-modal__sign-link" href="#">Sign up</a>
         </div>

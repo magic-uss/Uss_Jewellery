@@ -19,15 +19,26 @@
     display: flex;
     align-items: flex-start;
   }
+
+  &--nojs {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+  }
 }
 
-.cart-modal__wrapper {
+.cart-modal__content {
   position: relative;
   width: 500px;
   padding: 47px 33px 55px 35px;
   background-color: $white;
   box-shadow: 0 4px 32px transparentize($middle-grey, 0.76);
   overflow: visible;
+
+  &--nojs {
+    box-shadow: none;
+  }
 
   @media (max-width: $tablet) {
     padding: 47px 28px 55px 29px;
@@ -39,7 +50,7 @@
   }
 }
 
-.cart-modal__wrapper h2 {
+.cart-modal__content h2 {
   margin: 0 0 42px;
   font-family: $cormorant;
   font-weight: 700;
@@ -318,6 +329,10 @@
     background: url("../img/close-button-black.svg") 0 0 no-repeat;
   }
 
+  &--nojs {
+    display: none;
+  }
+
   &:hover {
     &::before {
       opacity: 0.6;
@@ -335,19 +350,4 @@
     top: 5px;
     right: 5px;
   }
-}
-
-.modal-main .cart-modal {
-  position: relative;
-  display: flex;
-  align-items: center;
-  background-color: transparent;
-}
-
-.modal-main .cart-modal__wrapper {
-  box-shadow: none;
-}
-
-.modal-main .cart-modal__close-button {
-  display: none;
 }

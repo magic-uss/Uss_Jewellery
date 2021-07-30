@@ -30,12 +30,13 @@
   width: 100%;
 }
 
-.products__product-link h3 {
+.products__product-link h2 {
   margin: 21px 0 6px;
   font-weight: 500;
   font-size: 16px;
   line-height: 21px;
   color: $dark-grey;
+  text-align: center;
 
   @media (max-width: $mobile) {
     margin: 16px 0 6px;
@@ -65,9 +66,9 @@
   }
 }
 
-.products__product-link:hover h3,
-.products__product-link:focus h3,
-.products__product-link:active h3,
+.products__product-link:hover h2,
+.products__product-link:focus h2,
+.products__product-link:active h2,
 .products__product-link:hover span,
 .products__product-link:focus span,
 .products__product-link:active span {

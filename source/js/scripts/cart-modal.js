@@ -3,7 +3,7 @@
 (function () {
   var openCartButton = document.querySelector('.product__cart-button');
   var modal = document.querySelector('.cart-modal');
-  var modalContent = document.querySelector('.cart-modal__wrapper');
+  var modalContent = document.querySelector('.cart-modal__content');
   var closeButton = document.querySelector('.cart-modal__close-button');
 
   function changeAlignment() {

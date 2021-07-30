@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Jewellery shop «CH»">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>CH Jewellery: product filter</title>
+    <title>CH Jewellery: login</title>
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="preload" href="./fonts/poppins-v15-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="./fonts/poppins-v15-latin-500.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -22,13 +22,13 @@
       </a>
     </header>
 
-    <main>
-      <h1 class="visually-hidden">Product catalog filter of jewellery shop «CH»</h1>
+    <main class="modal-main">
+      <h1 class="visually-hidden">Login page of jewellery shop «CH»</h1>
 
-      <div class="modal-main">
+      <div class="modal-main__inner">
         <a class="modal-main__link" href="main.html">Back to the main page</a>
-        <section class="login-modal">
-          <div class="login-modal__wrapper">
+        <section class="login-modal  login-modal--nojs">
+          <div class="login-modal__content">
             <h2>Log In</h2>
             <form class="login-modal__form  form" action="https://echo.htmlacademy.ru/" method="post">
               <label class="visually-hidden" for="email-modal">Ваш электронный адрес:</label>
@@ -38,11 +38,11 @@
               <a class="login-modal__forgot" href="#">Forgot your password?</a>
               <button type="submit">Log In</button>
             </form>
-            <div class="login-modal__sign">
+            <div class="login-modal__sign-wrapper">
               <p>Don’t have an account?</p>
               <a class="login-modal__sign-link" href="#">Sign up</a>
             </div>
-            <button class="login-modal__close-button" type="button" aria-label="Close"></button>
+            <button class="login-modal__close-button  login-modal__close-button--nojs" type="button" aria-label="Close"></button>
           </div>
         </section>
       </div>

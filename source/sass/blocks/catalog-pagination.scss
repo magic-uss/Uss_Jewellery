@@ -6,12 +6,10 @@
   }
 }
 
-.catalog-pagination__wrapper {
+.catalog-pagination__inner {
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  max-width: 1220px;
-  margin: 0 auto;
   padding: 36px 25px 75px;
 
   @media (max-width: $tablet) {
@@ -23,7 +21,7 @@
   }
 }
 
-.catalog-pagination__inner {
+.catalog-pagination__controls-wrapper {
   display: flex;
   justify-content: space-between;
   width: calc((100% - 90px) / 4 * 3 + 60px);

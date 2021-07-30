@@ -1,10 +1,8 @@
-.site-menu__list {
+.site-menu__inner {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
-  max-width: 1220px;
-  margin: 0 auto;
   padding: 19px 25px 18px 35px;
   list-style: none;
 
@@ -73,11 +71,11 @@
 }
 
 @media (max-width: $tablet) {
-  .page-header--closed .site-menu__list {
+  .page-header--closed .site-menu__inner {
     display: none;
   }
 
-  .page-header--nojs .site-menu__list {
+  .page-header--nojs .site-menu__inner {
     display: flex;
   }
 }

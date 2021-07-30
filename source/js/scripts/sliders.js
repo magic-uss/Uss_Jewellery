@@ -1,57 +1,61 @@
 'use strict';
 
 (function () {
-  new Swiper('.slider__container', {
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    pagination: {
-      el: '.slider__pagination',
-    },
-    breakpoints: {
-      0: {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
-        pagination: {
-          el: '.slider__pagination',
-          clickable: false,
-          type: 'fraction',
-          renderFraction: function (currentClass, totalClass) {
-            return '<span class="' + currentClass + '"></span>' + ' of ' + '<span class="' + totalClass + '"></span>';
-          },
-        },
-      },
-      768: {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
-        pagination: {
-          el: '.slider__pagination',
-          clickable: true,
-          renderBullet: function (index, className) {
-            return '<span class="' + className + '">' + (index + 1) + '</span>';
-          },
-        },
-      },
-      1024: {
-        slidesPerView: 4,
-        slidesPerGroup: 4,
-        pagination: {
-          el: '.slider__pagination',
-          clickable: true,
-          renderBullet: function (index, className) {
-            return '<span class="' + className + '">' + (index + 1) + '</span>';
-          },
-        },
-      }
-    },
-    simulateTouch: false,
-    spaceBetween: 30,
-    watchOverflow: true,
-    loop: true,
-    speed: 800,
-  });
+  var productSlider = document.querySelector('.slider__container');
 
+  if (productSlider) {
+    new Swiper(productSlider, {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.slider__pagination',
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          pagination: {
+            el: '.slider__pagination',
+            clickable: false,
+            type: 'fraction',
+            renderFraction: function (currentClass, totalClass) {
+              return '<span class="' + currentClass + '"></span>' + ' of ' + '<span class="' + totalClass + '"></span>';
+            },
+          },
+        },
+        768: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          pagination: {
+            el: '.slider__pagination',
+            clickable: true,
+            renderBullet: function (index, className) {
+              return '<span class="' + className + '">' + (index + 1) + '</span>';
+            },
+          },
+        },
+        1024: {
+          slidesPerView: 4,
+          slidesPerGroup: 4,
+          pagination: {
+            el: '.slider__pagination',
+            clickable: true,
+            renderBullet: function (index, className) {
+              return '<span class="' + className + '">' + (index + 1) + '</span>';
+            },
+          },
+        }
+      },
+      simulateTouch: false,
+      spaceBetween: 30,
+      watchOverflow: true,
+      loop: true,
+      speed: 800,
+    });
+  }
+   
   var slider = document.querySelector('.product__slider');
   var productPagination = document.querySelector('.product__pagination');
   var gallerySwiper;
@@ -92,8 +96,10 @@
     }
   }
 
-  mobileSlider();
-  window.addEventListener('resize', function () {
+  if (slider) {
     mobileSlider();
-  });
+    window.addEventListener('resize', function () {
+      mobileSlider();
+    });
+  }
 })();
