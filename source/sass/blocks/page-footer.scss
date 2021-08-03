@@ -82,6 +82,7 @@
   color: $white;
   background-color: transparent;
   border: none;
+  border-radius: 0;
 
   &::placeholder {
     font-weight: 500;

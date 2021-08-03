@@ -90,6 +90,7 @@
 }
 
 .cart-modal__title-wrapper span {
+  margin: 0;
   font-size: 18px;
   line-height: 23px;
   color: $dark-grey;
@@ -118,7 +119,15 @@
 .cart-modal__count-wrapper span {
   align-self: center;
   display: block;
+  margin: 0;
   padding: 0 5px 5px;
+  font-size: 18px;
+  line-height: 23px;
+
+  @media (max-width: $mobile) {
+    font-size: 16px;
+    line-height: 21px;
+  }
 }
 
 .cart-modal__count-button {

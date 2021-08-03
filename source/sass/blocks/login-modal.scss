@@ -50,8 +50,12 @@
   }
 
   @media (max-width: $mobile) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 84.4%;
-    padding: 121px 15px 40px;
+    padding: 38% 15px 40px;
+    aspect-ratio: 270 / 470;
 
     background: $light-brown url("../img/login-bg-mobile.jpg") center 0 / contain no-repeat;
 
@@ -93,6 +97,7 @@
   background-color: transparent;
   border: none;
   border-bottom: 1px solid $dark-grey;
+  border-radius: 0;
 
   &::placeholder {
     font-weight: 500;
@@ -146,6 +151,7 @@
   color: $white;
   background-color: $brown;
   border: none;
+  cursor: pointer;
 
   &:hover,
   &:focus {
@@ -168,6 +174,10 @@
   font-size: 14px;
   line-height: 21px;
   color: $grey;
+
+  @media (max-width: $mobile) {
+    margin: 0 5px 0 0;
+  }
 }
 
 .login-modal__sign-wrapper {
