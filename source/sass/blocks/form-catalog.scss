@@ -186,6 +186,7 @@
   font-size: 14px;
   line-height: 18px;
   color: $dark-grey;
+  cursor: pointer;
 
   &::before {
     content: "";
@@ -213,6 +214,7 @@
 
 .form-catalog__input-wrapper {
   flex-direction: column;
+  align-items: flex-start;
 
   @media (max-width: $tablet) {
     &--price {

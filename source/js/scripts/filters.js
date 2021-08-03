@@ -51,23 +51,11 @@
     });
   }
 
-  function onClearEnterPress(evt) {
-    if (isEnterEvent(evt)) {
-      evt.preventDefault();
-      clearInputs();
-    }
-  }
-
   if (clearButton && inputs) {
     clearButton.addEventListener('click', function (evt) {
       if (evt.target === clearButton) {
         evt.preventDefault();
         clearInputs();
-      }
-    });
-    window.addEventListener('keydown', function (evt) {
-      if (evt.target === clearButton) {
-        onClearEnterPress(evt);
       }
     });
   }

@@ -52,9 +52,10 @@
   @media (max-width: $mobile) {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     width: 84.4%;
-    padding: 38% 15px 40px;
+    max-width: 320px;
+    padding: 68px 15px 40px;
     aspect-ratio: 270 / 470;
 
     background: $light-brown url("../img/login-bg-mobile.jpg") center 0 / contain no-repeat;
@@ -75,7 +76,7 @@
   text-align: center;
 
   @media (max-width: $mobile) {
-    margin: 0 0 19px;
+    margin: 22% 0 19px;
     font-size: 24px;
     line-height: 31px;
   }
@@ -84,6 +85,10 @@
 .login-modal__form {
   display: flex;
   flex-direction: column;
+
+  @media (max-width: $mobile) {
+    flex-grow: 2;
+  }
 }
 
 .login-modal__form input {
@@ -164,7 +169,7 @@
   }
 
   @media (max-width: $mobile) {
-    margin: 35px 0 0;
+    margin: auto 0 0;
   }
 }
 

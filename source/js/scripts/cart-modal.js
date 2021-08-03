@@ -5,6 +5,13 @@
   var modal = document.querySelector('.cart-modal');
   var modalContent = document.querySelector('.cart-modal__content');
   var closeButton = document.querySelector('.cart-modal__close-button');
+  var KEYCODE_TAB = 9;
+
+  if (modalContent) {
+    var focusableElements = modalContent.querySelectorAll('a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled]), *[tabindex="0"]');
+    var firstFocusableElement = focusableElements[0];
+    var lastFocusableElement = focusableElements[focusableElements.length - 1];
+  }
 
   function changeAlignment() {
     if (modalContent.clientHeight > modal.clientHeight) {
@@ -43,11 +50,13 @@
     modal.classList.add('cart-modal--show');
     changeAlignment();
     document.body.style.overflow = 'hidden';
+    firstFocusableElement.focus();
 
     window.addEventListener('resize', changeAlignment, false);
     window.addEventListener('keydown', onModalEscPress);
     closeButton.addEventListener('click', closeModal);
     modal.addEventListener('click', onModalOverlayPress);
+    modalContent.addEventListener('keydown', loopFocus);
   }
 
   function closeModal() {
@@ -63,6 +72,27 @@
     window.removeEventListener('keydown', onModalEscPress);
     closeButton.removeEventListener('click', closeModal);
     modal.removeEventListener('click', onModalOverlayPress);
+    modalContent.removeEventListener('keydown', loopFocus);
+  }
+
+  function loopFocus(evt) {
+    var isTabPressed = (evt.key === 'Tab' || evt.keyCode === KEYCODE_TAB);
+
+    if (!isTabPressed) {
+      return;
+    }
+
+    if (evt.shiftKey) {
+      if (document.activeElement === firstFocusableElement) {
+        lastFocusableElement.focus();
+        evt.preventDefault();
+      }
+    } else {
+      if (document.activeElement === lastFocusableElement) {
+        firstFocusableElement.focus();
+        evt.preventDefault();
+      }
+    }
   }
 
   if (modal && openCartButton && closeButton) {
