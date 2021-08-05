@@ -56,7 +56,6 @@
     width: 84.4%;
     max-width: 320px;
     padding: 68px 15px 40px;
-    aspect-ratio: 270 / 470;
 
     background: $light-brown url("../img/login-bg-mobile.jpg") center 0 / contain no-repeat;
 
@@ -85,10 +84,6 @@
 .login-modal__form {
   display: flex;
   flex-direction: column;
-
-  @media (max-width: $mobile) {
-    flex-grow: 2;
-  }
 }
 
 .login-modal__form input {
@@ -169,7 +164,7 @@
   }
 
   @media (max-width: $mobile) {
-    margin: auto 0 0;
+    margin: 35px 0 0;
   }
 }
 
